@@ -24,7 +24,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
+    "export": "npm run build && next export",
     "lint": "semistandard",
     "format": "prettier-semi --single-quote --write 'src/**.js'"
   }
