@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up node.
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install and build.
+        run: |
+          npm ci
+          npm run export
+        env:
+          CI: true
+      - name: Deploy!
+        uses: demurgos/ga-deploy-git@v1
+        with:
+          accessToken: ${{ secrets.PUSH_TOKEN }}
+          commitEmail: "accounts+github@jitesoft.com"
+          commitUser: "JiteBot"
+          destBranch: "gh-pages"
+          srcDir: "out"
