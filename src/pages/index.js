@@ -149,15 +149,16 @@ export default () => {
         </p>
       </Block>
 
-      <Block title={'example in ' + language.name.toLowerCase()}>
-        <Highlight className='my-2' languages={[language.hljs]}>
-          {language.code}
-        </Highlight>
-        <p className="pt-3">Installation</p>
+      <Block title={language.name.toLowerCase() + ' usage'}>
+      <p>installation</p>
         <Highlight className='my-2' languages={['shell']}>
           {language.install}
         </Highlight>
-        <p className="pt-3"><a target="_blank" href={language.link} className="text-blue-500 hover:underline">Read more</a></p>
+        <p className="pt-3">example</p>
+        <Highlight className='my-2' languages={[language.hljs]}>
+          {language.code}
+        </Highlight>
+        <p className="pt-3"><a target="_blank" href={language.link} className="text-blue-500 hover:underline">read more</a></p>
       </Block>
 
       <Block title='features'>
@@ -167,7 +168,7 @@ export default () => {
           <li>determine age</li>
           <li>determine sex</li>
         </ul>
-        <p className="pt-3">not all features may be implemented in the different packages</p>
+        <p className="pt-3">all features might not be implemented in all languages.</p>
       </Block>
 
       <Try title='try' />
