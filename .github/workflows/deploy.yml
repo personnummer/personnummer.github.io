@@ -14,6 +14,7 @@ jobs:
       - name: Install and build.
         run: |
           npm ci
+          node scripts/implementations.js
           npm run build
           npm run export
         env:

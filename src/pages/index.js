@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Highlight } from 'react-fast-highlight';
 import Block from '../components/Block';
+import Implementations from '../components/Implementations';
 import Try from '../components/Try';
 
 const languages = [
@@ -172,6 +173,8 @@ export default () => {
       </Block>
 
       <Try title='try' />
+
+      <Implementations title='implementations' />
 
       <Block title='license' className="mb-20">
         <p>All hashids libraries are under <a target="_blank" href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
