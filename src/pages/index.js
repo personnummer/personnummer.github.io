@@ -125,7 +125,11 @@ fun main(args: Array<String>) {
     name: 'Swift',
     hljs: 'swift',
     link: '',
-    install: 'pod \'Personnummer\'',
+    install: `1. Add dependency to Podfile
+pod \'Personnummer\'
+
+2. Then run
+pod install`,
     code: `Personnummer.isValid("19121212+1212")`
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
