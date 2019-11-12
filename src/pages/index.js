@@ -126,7 +126,7 @@ fun main(args: Array<String>) {
     hljs: 'swift',
     link: '',
     install: 'pod \'Personnummer\'',
-    code: `Personnummer.valid("19121212+1212")`
+    code: `Personnummer.isValid("19121212+1212")`
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
