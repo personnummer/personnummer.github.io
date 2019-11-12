@@ -124,7 +124,7 @@ fun main(args: Array<String>) {
   {
     name: 'Swift',
     hljs: 'swift',
-    link: '',
+    link: 'https://github.com/personnummer/swift',
     install: `1. Add dependency to Podfile
 pod 'Personnummer'
 
