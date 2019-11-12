@@ -169,10 +169,13 @@ export default () => {
     <>
       <Block title='validate swedish social security numbers'>
         <p className='pt-3'>
+        personnummer is a <a href="https://github.com/personnummer" target="_blank" className="text-blue-500 hover:underline">small open-source project</a> that validates, formatting and determine sex and age from swedish social security numbers.
+        </p>
+        <p className='pt-3'>
         available in {languagesLinks}
         </p>
-        <p className='pt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </Block>
+
 
       <Block title={'example in ' + language.name.toLowerCase()}>
         <Highlight className='my-2' languages={[language.hljs]}>
@@ -182,7 +185,7 @@ export default () => {
         <Highlight className='my-2' languages={['shell']}>
           {language.install}
         </Highlight>
-        <p className="pt-3"><a href={language.link} className="text-blue-500 hover:underline">Read more</a></p>
+        <p className="pt-3"><a target="_blank" href={language.link} className="text-blue-500 hover:underline">Read more</a></p>
       </Block>
 
       <Block title='features'>
@@ -233,10 +236,11 @@ export default () => {
             </tr>
           </tbody>
         </table>
+        <p className="mt-3 italic">using javascript version 2.1.0</p>
       </Block>
 
       <Block title='license' className="mb-20">
-        <p>All hashids libraries are under <a href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
+        <p>All hashids libraries are under <a target="_blank" href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
       </Block>
     </>
   );
