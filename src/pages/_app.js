@@ -9,7 +9,12 @@ export default class Application extends App {
     return (
       <div>
         <div className='container max-auto'>
-          <Component {...pageProps} />
+          <div className='mt-10 mx-auto w-3/6'>
+            <div>
+              <h1 className='text-6xl text-center text-gray-700'>personnummer</h1>
+            </div>
+            <Component {...pageProps} />
+          </div>
         </div>
       </div>
     );

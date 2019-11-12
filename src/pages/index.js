@@ -116,7 +116,7 @@ class Example
     code: `import personnummer.Personnummer
 
 fun main(args: Array<String>) {
-  Personnummer.valid("19121212+1212")      // => true
+  Personnummer.valid("19121212+1212")
 }`
   },
   {
@@ -138,11 +138,7 @@ export default () => {
   )).reduce((prev, curr) => [prev, ', ', curr]);
 
   return (
-    <div className='mt-10 mx-auto w-3/6'>
-      <div className=''>
-        <h1 className='text-6xl text-center text-gray-700'>personnummer</h1>
-      </div>
-
+    <>
       <Block title='validate swedish social security numbers'>
         <p className='pt-3'>
         available in {languagesLinks}
@@ -173,6 +169,6 @@ export default () => {
       <Block title='license'>
         <p>All hashids libraries are under <a href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
       </Block>
-    </div>
+    </>
   );
 };
