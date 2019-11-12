@@ -128,7 +128,7 @@ fun main(args: Array<String>) {
     install: 'pod \'Personnummer\'',
     code: `Personnummer.valid("19121212+1212")`
   }
-];
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export default () => {
   const [languageIndex, setLanguageIndex] = useState(0);
@@ -145,12 +145,16 @@ export default () => {
         <p className='pt-3'>
         personnummer is a <a href="https://github.com/personnummer" target="_blank" className="text-blue-500 hover:underline">small open-source project</a> that validates, formatting and determine sex and age from swedish social security numbers.
         </p>
-        <p className='pt-3'>
-        available in {languagesLinks}
-        </p>
+        <ul className="list-reset flex border-b border-gray mt-3">
+            {languages.map((l, li) => (
+              <li className={`${l.name === languages[languageIndex].name ? '-mb-px' : ''} mr-1`}>
+                <a className={`bg-white inline-block py-2 px-4 text-blue-500 font-semibold ${l.name === languages[languageIndex].name ? 'border-l border-t border-r rounded-t' : 'hover:text-blue-600'}`} href="#" key={li} onClick={() => setLanguageIndex(li)}>{l.name}</a>
+              </li>
+            ))}
+        </ul>
       </Block>
 
-      <Block title={language.name.toLowerCase() + ' usage'}>
+      <Block border={false}>
       <p>installation</p>
         <Highlight className='my-2' languages={['shell']}>
           {language.install}

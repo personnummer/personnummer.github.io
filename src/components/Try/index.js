@@ -31,7 +31,7 @@ export default props => {
   const pnrObj = getPersonnummerObj(ssn);
 
   return (
-    <Block title='try'>
+    <Block {...props}>
         <p className="pt-3">input</p>
         <input type="text" onChange={e => setSsn(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         <p className="pt-3">result</p>
