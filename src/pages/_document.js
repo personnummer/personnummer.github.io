@@ -47,7 +47,7 @@ export default class AppDocument extends Document {
             href='/favicon-16x16.png'
           />
           <link rel='stylesheet' href='https://highlightjs.org/static/demo/styles/railscasts.css' />
-          <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"/>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta
             name='description'
