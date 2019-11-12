@@ -133,11 +133,6 @@ fun main(args: Array<String>) {
 export default () => {
   const [languageIndex, setLanguageIndex] = useState(0);
   const language = languages[languageIndex];
-  const languagesLinks = languages.map((l, li) => (
-    (
-      <a href='#' className='text-blue-500 hover:underline' key={li} onClick={() => setLanguageIndex(li)}>{l.name}</a>
-    )
-  )).reduce((prev, curr) => [prev, ', ', curr]);
 
   return (
     <>
