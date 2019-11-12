@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Highlight } from 'react-fast-highlight';
 import Block from '../components/Block';
+import personnummer from 'personnummer';
 
 const languages = [
   {
@@ -128,7 +129,32 @@ fun main(args: Array<String>) {
   }
 ];
 
+const getPersonnummerObj = ssn => {
+  const output = {
+    age: 'n/a',
+    long: 'n/a',
+    sex: 'n/a',
+    short: 'n/a',
+    valid: personnummer.valid(ssn),
+  };
+
+  if (output.valid) {
+    output.age = personnummer.getAge(ssn);
+    output.long = personnummer.format(ssn, true);
+    output.short = personnummer.format(ssn);
+
+    try {
+      output.sex = personnummer.isMale(ssn) ? 'male' : 'female';
+    } catch (err) {
+      output.sex = 'n/a';
+    }
+  }
+
+  return output;
+}
+
 export default () => {
+  const [ssn, setSsn] = useState('');
   const [languageIndex, setLanguageIndex] = useState(0);
   const language = languages[languageIndex];
   const languagesLinks = languages.map((l, li) => (
@@ -136,6 +162,8 @@ export default () => {
       <a href='#' className='text-blue-500 hover:underline' key={li} onClick={() => setLanguageIndex(li)}>{l.name}</a>
     )
   )).reduce((prev, curr) => [prev, ', ', curr]);
+
+  const pnrObj = getPersonnummerObj(ssn);
 
   return (
     <>
@@ -164,9 +192,50 @@ export default () => {
           <li>determine age</li>
           <li>determine sex</li>
         </ul>
+        <p className="pt-3">not all features may be implemented in the different packages</p>
       </Block>
 
-      <Block title='license'>
+      <Block title='try'>
+        <p className="pt-3">input</p>
+        <input type="text" onChange={e => setSsn(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+        <p className="pt-3">result</p>
+        <table className="table-fixed w-full">
+          <tbody>
+            <tr>
+              <td className="border px-4 py-2">
+                valid
+              </td>
+              <td className={`border px-4 py-2 ${pnrObj.valid ? 'text-green-500' : 'text-red-500'}`}>{pnrObj.valid ? 'yes' : 'no'}</td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2">
+                short format
+              </td>
+              <td className="border px-4 py-2">{pnrObj.short}</td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2">
+                long format
+              </td>
+              <td className="border px-4 py-2">{pnrObj.long}</td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2">
+                age
+              </td>
+              <td className="border px-4 py-2">{pnrObj.age}</td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2">
+                sex
+              </td>
+              <td className="border px-4 py-2">{pnrObj.sex}</td>
+            </tr>
+          </tbody>
+        </table>
+      </Block>
+
+      <Block title='license' className="mb-20">
         <p>All hashids libraries are under <a href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
       </Block>
     </>
