@@ -177,7 +177,7 @@ export default () => {
       <Implementations title='implementations' />
 
       <Block title='license' className="mb-20">
-        <p>All hashids libraries are under <a target="_blank" href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
+        <p>All personnummer packages are under <a target="_blank" href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
       </Block>
     </>
   );
