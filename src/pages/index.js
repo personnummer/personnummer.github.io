@@ -184,10 +184,6 @@ export default () => {
 
       <Implementations title='implementations' />
 
-      <Block title='personnummer is a project from'>
-        <a href="https://twitter.com/frozzare" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:underline'>Fredrik Forsmo</a>, <a href="https://twitter.com/_JiTe_" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:underline'>Johannes Tegnér</a>, <a href="https://twitter.com/rasmusbe" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:underline'>Rasmus Bengtsson</a> and contributions from <a href="https://github.com/personnummer" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:underline'>many more</a>
-      </Block>
-
       <Block title='license' className='mb-20'>
         <p>All personnummer packages are under <a target='_blank' rel='noopener noreferrer' href='https://opensource.org/licenses/MIT' className='text-blue-500 hover:underline'>MIT license</a>.</p>
       </Block>
