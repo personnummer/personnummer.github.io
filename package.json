@@ -27,6 +27,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "semistandard",
-    "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix"
+    "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
+    "implementations": "node scripts/implementations.js"
   }
 }

@@ -35,7 +35,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -80,7 +88,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>2.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v2'
+            >
+              2.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -125,7 +141,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -170,7 +194,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -215,7 +247,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>2.1</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v21'
+            >
+              2.1
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -260,7 +300,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -305,7 +353,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>3.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v3'
+            >
+              3.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -350,7 +406,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>2.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v2'
+            >
+              2.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -396,7 +460,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
@@ -442,7 +514,15 @@ export default props => (
               />
             </a>
           </td>
-          <td className='border px-4 py-2'>1.0</td>
+          <td className='border px-4 py-2'>
+            <a
+              className='text-blue-500 hover:underline'
+              rel='noopener noreferrer'
+              href='https://github.com/personnummer/meta/#package-specification-v1'
+            >
+              1.0
+            </a>
+          </td>
           <td className='border px-4 py-2'>
             <a
               className='text-blue-500 hover:underline'
