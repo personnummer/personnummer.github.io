@@ -40,8 +40,8 @@ personnummer.valid('19121212+1212')`
     name: 'PHP',
     hljs: 'php',
     link: 'https://github.com/personnummer/php',
-    install: 'composer require frozzare/personnummer',
-    code: `use Frozzare\\Personnummer\\Personnummer;
+    install: 'composer require personnummer/personnummer',
+    code: `use Personnummer\\Personnummer;
 
 Personnummer::valid('19121212+1212');`
   },
