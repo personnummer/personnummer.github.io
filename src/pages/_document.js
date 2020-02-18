@@ -54,8 +54,14 @@ export default class AppDocument extends Document {
             sizes='16x16'
             href='/favicon-16x16.png'
           />
-          <link rel='stylesheet' href='https://highlightjs.org/static/demo/styles/railscasts.css' />
-          <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap' rel='stylesheet' />
+          <link
+            rel='stylesheet'
+            href='https://highlightjs.org/static/demo/styles/railscasts.css'
+          />
+          <link
+            href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'
+            rel='stylesheet'
+          />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta
             name='description'
@@ -66,19 +72,13 @@ export default class AppDocument extends Document {
             property='og:description'
             content='Validate swedish social security numbers'
           />
-          <meta
-            property='og:image'
-            content='https://personnummer.dev/'
-          />
+          <meta property='og:image' content='https://personnummer.dev/' />
           <meta name='twitter:title' content='Personnummer' />
           <meta
             name='twitter:description'
             content='Validate swedish social security numbers'
           />
-          <meta
-            name='twitter:image'
-            content='https://personnummer.dev/'
-          />
+          <meta name='twitter:image' content='https://personnummer.dev/' />
           <meta name='twitter:card' content='summary' />
         </Head>
         <body>

@@ -13,7 +13,9 @@ export default class Application extends App {
           <title>Personnummer</title>
         </Head>
         <div>
-          <h1 className='text-4xl md:text-6xl text-center text-gray-700'>personnummer</h1>
+          <h1 className='text-4xl md:text-6xl text-center text-gray-700'>
+            personnummer
+          </h1>
         </div>
         <Component {...pageProps} />
       </div>

@@ -33,38 +33,38 @@ export default props => {
   return (
     <Block {...props}>
       <p className='pt-3'>input</p>
-      <input type='text' onChange={e => setSsn(e.target.value)} className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
+      <input
+        type='text'
+        onChange={e => setSsn(e.target.value)}
+        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+      />
       <p className='pt-3'>result</p>
       <table className='table-fixed w-full'>
         <tbody>
           <tr>
-            <td className='border px-4 py-2'>
-                valid
+            <td className='border px-4 py-2'>valid</td>
+            <td
+              className={`border px-4 py-2 ${
+                pnrObj.valid ? 'text-green-500' : 'text-red-500'
+              }`}
+            >
+              {pnrObj.valid ? 'yes' : 'no'}
             </td>
-            <td className={`border px-4 py-2 ${pnrObj.valid ? 'text-green-500' : 'text-red-500'}`}>{pnrObj.valid ? 'yes' : 'no'}</td>
           </tr>
           <tr>
-            <td className='border px-4 py-2'>
-                short format
-            </td>
+            <td className='border px-4 py-2'>short format</td>
             <td className='border px-4 py-2'>{pnrObj.short}</td>
           </tr>
           <tr>
-            <td className='border px-4 py-2'>
-                long format
-            </td>
+            <td className='border px-4 py-2'>long format</td>
             <td className='border px-4 py-2'>{pnrObj.long}</td>
           </tr>
           <tr>
-            <td className='border px-4 py-2'>
-                age
-            </td>
+            <td className='border px-4 py-2'>age</td>
             <td className='border px-4 py-2'>{pnrObj.age}</td>
           </tr>
           <tr>
-            <td className='border px-4 py-2'>
-                sex
-            </td>
+            <td className='border px-4 py-2'>sex</td>
             <td className='border px-4 py-2'>{pnrObj.sex}</td>
           </tr>
         </tbody>

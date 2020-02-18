@@ -9,14 +9,12 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.7.4",
-    "install": "^0.13.0",
     "marked": "^0.8.0",
-    "next": "^9.2.1",
+    "next": "^9.2.2",
     "node-fetch": "^2.6.0",
-    "npm": "^6.13.7",
     "personnummer": "^2.1.1",
     "postcss-easy-import": "^3.0.0",
-    "prettier-semi-cli": "^1.0.0",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-fast-highlight": "^3.0.0",
@@ -29,6 +27,6 @@
     "start": "next start",
     "export": "next export",
     "lint": "semistandard",
-    "format": "prettier-semi --single-quote --write 'src/**.js'"
+    "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix"
   }
 }
