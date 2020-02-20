@@ -218,6 +218,7 @@ export default () => {
           <li>formatting</li>
           <li>determine age</li>
           <li>determine sex</li>
+          <li>determine if coordination number</li>
         </ul>
         <p className='pt-3'>
           all features might not be implemented in all languages.
