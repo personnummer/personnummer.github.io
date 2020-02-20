@@ -8,6 +8,7 @@ const getPersonnummerObj = ssn => {
     long: 'n/a',
     sex: 'n/a',
     short: 'n/a',
+    con: false,
     valid: personnummer.valid(ssn)
   };
 
@@ -23,6 +24,7 @@ const getPersonnummerObj = ssn => {
       output.long = p.format(true);
       output.short = p.format();
       output.sex = p.isMale() ? 'male' : 'female';
+      output.con = p.isCoordinationNumber();
     }
   } catch (err) {
     output.sex = 'n/a';
@@ -71,6 +73,16 @@ export default props => {
           <tr>
             <td className='border px-4 py-2'>sex</td>
             <td className='border px-4 py-2'>{pnrObj.sex}</td>
+          </tr>
+          <tr>
+            <td className='border px-4 py-2'>coordination number</td>
+            <td
+              className={`border px-4 py-2 ${
+                pnrObj.con ? 'text-green-500' : 'text-red-500'
+              }`}
+            >
+              {pnrObj.con ? 'yes' : 'no'}
+            </td>
           </tr>
         </tbody>
       </table>
