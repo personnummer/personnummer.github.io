@@ -19,10 +19,10 @@ const getPersonnummerObj = ssn => {
     const p = personnummer.parse(ssn);
 
     if (output.valid) {
-      output.age = p.getAge(ssn);
-      output.long = p.format(ssn, true);
-      output.short = p.format(ssn);
-      output.sex = p.isMale(ssn) ? 'male' : 'female';
+      output.age = p.getAge();
+      output.long = p.format(true);
+      output.short = p.format();
+      output.sex = p.isMale() ? 'male' : 'female';
     }
   } catch (err) {
     output.sex = 'n/a';
