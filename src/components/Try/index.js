@@ -11,16 +11,21 @@ const getPersonnummerObj = ssn => {
     valid: personnummer.valid(ssn)
   };
 
-  if (output.valid) {
-    output.age = personnummer.getAge(ssn);
-    output.long = personnummer.format(ssn, true);
-    output.short = personnummer.format(ssn);
+  if (typeof ssn !== 'string') {
+    return output;
+  }
 
-    try {
-      output.sex = personnummer.isMale(ssn) ? 'male' : 'female';
-    } catch (err) {
-      output.sex = 'n/a';
+  try {
+    const p = personnummer.parse(ssn);
+
+    if (output.valid) {
+      output.age = p.getAge(ssn);
+      output.long = p.format(ssn, true);
+      output.short = p.format(ssn);
+      output.sex = p.isMale(ssn) ? 'male' : 'female';
     }
+  } catch (err) {
+    output.sex = 'n/a';
   }
 
   return output;
@@ -69,7 +74,7 @@ export default props => {
           </tr>
         </tbody>
       </table>
-      <p className='mt-3 italic'>using javascript version 2.1.1</p>
+      <p className='mt-3 italic'>using javascript version 3.0.0</p>
     </Block>
   );
 };
