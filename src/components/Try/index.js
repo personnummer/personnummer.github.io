@@ -86,7 +86,7 @@ export default props => {
           </tr>
         </tbody>
       </table>
-      <p className='mt-3 italic'>using javascript version 3.0.0</p>
+      <p className='mt-3 italic'>using javascript version 3.0.1</p>
     </Block>
   );
 };
