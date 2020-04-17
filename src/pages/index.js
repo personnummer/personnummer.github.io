@@ -140,21 +140,31 @@ export default () => {
 
   return (
     <>
-      <Block title='validate swedish social security numbers'>
-        <p className='pt-3'>
+      <Block title="validate swedish social security numbers">
+        <p className="pt-3">
           personnummer is a{' '}
           <a
-            href='https://github.com/personnummer'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-blue-500 hover:underline'
+            href="https://github.com/personnummer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
           >
             small open-source project
           </a>{' '}
           that validates, formatting and determine sex and age from swedish
-          social security numbers.
+          social security numbers. support the project by becoming a backer or
+          sponsor via{' '}
+          <a
+            href="https://opencollective.com/personnummer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            OpenCollective
+          </a>
+          .
         </p>
-        <ul className='hidden md:flex list-reset border-b border-gray mt-3'>
+        <ul className="hidden md:flex list-reset border-b border-gray mt-3">
           {languages.map((l, li) => (
             <li
               key={li}
@@ -174,14 +184,15 @@ export default () => {
             </li>
           ))}
         </ul>
-        <p className='mt-3 block md:hidden'>select language to show usage</p>
+        <p className="mt-3 block md:hidden">select language to show usage</p>
         <select
-          name='languages'
-          id='languages'
+          name="languages"
+          id="languages"
           value={language.name}
-          className='block md:hidden mt-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          className="block md:hidden mt-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           onChange={e =>
-            setLanguage(languages.filter(l => l.name === e.target.value).pop())}
+            setLanguage(languages.filter(l => l.name === e.target.value).pop())
+          }
         >
           {languages.map((l, li) => (
             <option key={li} value={l.name}>
@@ -193,50 +204,50 @@ export default () => {
 
       <Block border={false}>
         <p>installation</p>
-        <Highlight className='my-2' languages={['shell']}>
+        <Highlight className="my-2" languages={['shell']}>
           {language.install}
         </Highlight>
-        <p className='pt-3'>example</p>
-        <Highlight className='my-2' languages={[language.hljs]}>
+        <p className="pt-3">example</p>
+        <Highlight className="my-2" languages={[language.hljs]}>
           {language.code}
         </Highlight>
-        <p className='pt-3'>
+        <p className="pt-3">
           <a
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
             href={language.link}
-            className='text-blue-500 hover:underline'
+            className="text-blue-500 hover:underline"
           >
             read more
           </a>
         </p>
       </Block>
 
-      <Block title='features'>
-        <ul className='list-decimal ml-4'>
+      <Block title="features">
+        <ul className="list-decimal ml-4">
           <li>validation</li>
           <li>formatting</li>
           <li>determine age</li>
           <li>determine sex</li>
           <li>determine if coordination number</li>
         </ul>
-        <p className='pt-3'>
+        <p className="pt-3">
           all features might not be implemented in all languages.
         </p>
       </Block>
 
-      <Try title='try' />
+      <Try title="try" />
 
-      <Implementations title='implementations' />
+      <Implementations title="implementations" />
 
-      <Block title='license' className='mb-20'>
+      <Block title="license" className="mb-20">
         <p>
-          All personnummer packages are under{' '}
+          all personnummer packages are under{' '}
           <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://opensource.org/licenses/MIT'
-            className='text-blue-500 hover:underline'
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://opensource.org/licenses/MIT"
+            className="text-blue-500 hover:underline"
           >
             MIT license
           </a>
