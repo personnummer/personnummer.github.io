@@ -171,7 +171,7 @@ export default () => {
               className={`${l.name === language.name ? '-mb-px' : ''} mr-1`}
             >
               <a
-                className={`bg-white inline-block py-2 px-4 text-blue-500 font-semibold ${
+                className={`bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer ${
                   l.name === language.name
                     ? 'border-l border-t border-r rounded-t'
                     : 'hover:text-blue-600'
