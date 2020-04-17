@@ -28,6 +28,6 @@
     "export": "next export",
     "lint": "semistandard",
     "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
-    "implementations": "node scripts/implementations.js"
+    "update": "node scripts/implementations.js"
   }
 }
