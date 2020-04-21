@@ -140,7 +140,7 @@ export default () => {
 
   return (
     <>
-      <Block title="validate swedish social security numbers">
+      <Block title="validate swedish personal identity numbers">
         <p className="pt-3">
           personnummer is a{' '}
           <a
@@ -152,7 +152,7 @@ export default () => {
             small open-source project
           </a>{' '}
           that validates, formatting and determine sex and age from swedish
-          social security numbers. support the project by becoming a backer or
+          personal identity numbers. support the project by becoming a backer or
           sponsor via{' '}
           <a
             href="https://opencollective.com/personnummer"
