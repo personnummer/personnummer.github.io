@@ -80,8 +80,8 @@ export default () => {
       <Implementations title="implementations" />
 
       <p className="pt-3">
-        some implementations may be work in progress and if you've found a bug,
-        please open a issue in the specific language repo.
+        some implementations may be in Work in Progress, if you find a bug,
+        please open an issue in the specific implementation repository.
       </p>
 
       <p className="pt-3">
