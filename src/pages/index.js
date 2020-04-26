@@ -38,7 +38,7 @@ export default () => {
           </a>
           .
         </p>
-        <p className="pt-2 text-center">
+        <p className="pt-5 text-center">
           <span className="text-gray-500 pr-1">available in:</span>
           {languages.map((l, li) => (
             <>
