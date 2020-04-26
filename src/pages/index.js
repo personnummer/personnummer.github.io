@@ -239,7 +239,7 @@ export default () => {
 
       <Try title="try" />
 
-      <Generate title="generate personal identity numbers for testing" />
+      <Generate title="generate personal identity numbers" />
 
       <Implementations title="implementations" />
 
