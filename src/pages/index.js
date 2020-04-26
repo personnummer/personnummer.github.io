@@ -49,6 +49,7 @@ export default () => {
                 className="inline-block text-blue-500 cursor-pointer hover:underline"
                 rel="noopener noreferrer"
                 target="_blank"
+                href={l.link}
               >
                 {l.name}
               </a>
