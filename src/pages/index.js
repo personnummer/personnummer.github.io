@@ -133,6 +133,15 @@ export default () => {
         >
           F#
         </a>
+        ,{' '}
+        <a
+          target="_blank"
+          href="https://clojure.org/"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Clojure
+        </a>
       </p>
 
       <Block title="license" className="mb-20">
