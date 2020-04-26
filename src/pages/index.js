@@ -87,7 +87,7 @@ export default () => {
 
       <p className="pt-3">
         if an implementation in your favorite language is missing, feel free to
-        port it over from one of the existing versions. There's still plenty of
+        port it over from one of the existing versions. there's still plenty of
         languages to contribute in:{' '}
         <a
           target="_blank"
