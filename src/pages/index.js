@@ -3,6 +3,7 @@ import { Highlight } from 'react-fast-highlight';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
+import Generate from '../components/Generate';
 
 const languages = [
   {
@@ -237,6 +238,8 @@ export default () => {
       </Block>
 
       <Try title="try" />
+
+      <Generate title="generate personal identity numbers for testing" />
 
       <Implementations title="implementations" />
 
