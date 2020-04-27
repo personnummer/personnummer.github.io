@@ -66,7 +66,8 @@ export default props => {
           <input
             id="g-year"
             name="g-year"
-            type="text"
+            type="number"
+            min="1"
             defaultValue={year}
             onChange={e => {
               setYear(e.target.value);
@@ -82,7 +83,9 @@ export default props => {
           <input
             id="g-month"
             name="g-month"
-            type="text"
+            type="number"
+            min="1"
+            max="12"
             defaultValue={month}
             onChange={e => {
               setMonth(e.target.value);
@@ -98,7 +101,9 @@ export default props => {
           <input
             id="g-day"
             name="g-day"
-            type="text"
+            type="number"
+            min="1"
+            max="31"
             defaultValue={day}
             onChange={e => {
               setDay(e.target.value);
@@ -119,7 +124,7 @@ export default props => {
       </div>
       <p className="block tracking-wide mb-2">result</p>
       <input
-        type="text"
+        type="tel"
         defaultValue={personnummer.valid(pin) ? pin : 'not valid'}
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
