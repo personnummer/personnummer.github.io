@@ -127,6 +127,15 @@ export default () => {
         ,{' '}
         <a
           target="_blank"
+          href="http://racket-lang.org/"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Racket
+        </a>
+        ,{' '}
+        <a
+          target="_blank"
           href="https://fsharp.org/"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
