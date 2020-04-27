@@ -100,7 +100,7 @@ export default () => {
         ,{' '}
         <a
           target="_blank"
-          href="http://programming.nu/"
+          href="https://programming-nu.github.io/"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
         >
