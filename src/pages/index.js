@@ -109,7 +109,7 @@ export default () => {
         ,{' '}
         <a
           target="_blank"
-          href="http://groovy-lang.org/"
+          href="https://groovy-lang.org/"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
         >
@@ -127,7 +127,7 @@ export default () => {
         ,{' '}
         <a
           target="_blank"
-          href="http://racket-lang.org/"
+          href="https://racket-lang.org/"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
         >
