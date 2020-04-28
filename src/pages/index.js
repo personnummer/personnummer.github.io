@@ -41,7 +41,7 @@ export default () => {
         <p className="pt-5 text-center">
           <span className="text-gray-500 pr-1">available in:</span>
           {languages.map((l, li) => (
-            <>
+            <span key={li}>
               {li + 1 === languages.length && (
                 <span className="text-gray-500 pr-1">and for</span>
               )}
@@ -56,7 +56,7 @@ export default () => {
               <span className="pr-1">
                 {li >= languages.length - 2 ? '' : ','}
               </span>
-            </>
+            </span>
           ))}
         </p>
       </Block>

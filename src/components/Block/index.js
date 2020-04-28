@@ -5,6 +5,7 @@ export default ({ border = true, children, className, title = '' }) => (
         className={`text-lg md:text-xl text-gray-700 mb-2 ${
           border ? 'border-b border-gray' : ''
         }`}
+        id={title.toLowerCase().replace(/ /g, '-')}
       >
         {title}
       </h2>
