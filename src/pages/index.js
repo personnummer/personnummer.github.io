@@ -70,7 +70,17 @@ export default () => {
           <li>determine if coordination number</li>
         </ul>
         <p className="pt-3">
-          all features might not be implemented in all languages.
+          all features might not be implemented in all languages, you can read
+          the full specification{' '}
+          <a
+            className="inline-block text-blue-500 cursor-pointer hover:underline"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/personnummer/meta/blob/master/README.md#package-specification-v3"
+          >
+            here
+          </a>
+          .
         </p>
       </Block>
 
