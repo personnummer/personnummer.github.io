@@ -13,7 +13,11 @@ export default class Application extends App {
           <title>Personnummer</title>
         </Head>
         <div>
-          <h1 className="text-4xl md:text-6xl text-center text-gray-700">
+          <h1 className="text-4xl md:text-5xl text-center text-gray-700">
+            <img
+              src="/apple-touch-icon.png"
+              className="w-8 sm:w-12 inline-block"
+            />{' '}
             personnummer
           </h1>
         </div>
