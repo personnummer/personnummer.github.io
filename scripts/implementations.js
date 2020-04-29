@@ -17,7 +17,7 @@ const path = require('path');
   let table = output[0];
 
   table = table.replace(/<table>/g, '<table className="table-fixed w-full">');
-  table = table.replace(/<th>/g, '<th className="px-4 py-2">');
+  table = table.replace(/<th>/g, '<th className="px-4 py-2 lowercase">');
   table = table.replace(/<td>/g, '<td className="border px-4 py-2">');
   table = table.replace(/<a/g, '<a className="text-blue-500 hover:underline" rel="noopener noreferrer" ');
   table = table.replace(/><\/a>/g, '/></a>');
