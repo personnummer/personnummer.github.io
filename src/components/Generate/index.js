@@ -1,44 +1,10 @@
 import { useState, useEffect } from 'react';
 import personnummer from 'personnummer';
+import generate from '@personnummer/generate';
 import Block from '../Block';
 
-const randomNumber = () => Math.floor(Math.random() * 9);
-
-const randomDate = (start, end) =>
-  new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-
-const padZero = i => (i < 10 ? `0${i}` : i);
-
-const luhn = str => {
-  let v = 0;
-  let sum = 0;
-
-  str += '';
-
-  for (let i = 0, l = str.length; i < l; i++) {
-    v = str[i];
-    v *= 2 - (i % 2);
-    if (v > 9) {
-      v -= 9;
-    }
-    sum += v;
-  }
-
-  return Math.ceil(sum / 10) * 10 - sum;
-};
-
 const generatePersonnummer = (y, m, d) => {
-  let c = '';
-
-  y = `${padZero(y)}`;
-  if (y.length > 2) {
-    c = y.slice(0, 2);
-    y = y.slice(2, 4);
-  }
-
-  const pin = `${y}${padZero(m)}${padZero(d)}${'' + randomNumber()}${'' +
-    randomNumber()}${'' + randomNumber()}`;
-  return `${c}${pin}${luhn(pin)}`;
+  return generate(new Date(Date.parse(`${y}-${m}-${d}`)));
 };
 
 export default props => {
