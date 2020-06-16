@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import personnummer from 'personnummer';
 import Block from '../Block';
+import pkg from '../../../package.json'
 
 const getPersonnummerObj = pin => {
   const output = {
@@ -86,7 +87,7 @@ export default props => {
           </tr>
         </tbody>
       </table>
-      <p className="mt-3 italic">using javascript version 3.0.2</p>
+      <p className="mt-3 italic">using javascript version {pkg.dependencies.personnummer.replace('^','')}</p>
     </Block>
   );
 };
