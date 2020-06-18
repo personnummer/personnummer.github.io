@@ -35,6 +35,15 @@ export default class Application extends App {
               className="text-blue-500 hover:underline"
             >
               GitHub
+            </a>{' '}
+            -{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/personnummerdev"
+              className="text-blue-500 hover:underline"
+            >
+              Twitter
             </a>
           </p>
         </div>
