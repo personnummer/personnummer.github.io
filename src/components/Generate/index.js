@@ -4,7 +4,7 @@ import generate from '@personnummer/generate';
 import Block from '../Block';
 
 const generatePersonnummer = (y, m, d) => {
-  return generate(new Date(Date.parse(`${y}-${m}-${d}`)));
+  return generate(new Date(y, m, d));
 };
 
 export default props => {
