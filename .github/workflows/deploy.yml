@@ -1,7 +1,11 @@
+name: "Install and build"
+
 on:
   push:
     branches:
       - develop
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +25,7 @@ jobs:
           CI: true
       - name: Deploy!
         uses: demurgos/ga-deploy-git@v1
+        if: ${{ github.event == 'push' }}
         with:
           accessToken: ${{ secrets.PUSH_TOKEN }}
           commitEmail: "accounts+github@jitesoft.com"
