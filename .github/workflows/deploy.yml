@@ -25,7 +25,7 @@ jobs:
           CI: true
       - name: Deploy!
         uses: demurgos/ga-deploy-git@v1
-        if: ${{ github.event == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         with:
           accessToken: ${{ secrets.PUSH_TOKEN }}
           commitEmail: "accounts+github@jitesoft.com"
