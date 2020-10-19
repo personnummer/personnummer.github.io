@@ -21,7 +21,7 @@
     "react-dom": "^16.14.0",
     "react-fast-highlight": "^3.0.0",
     "semistandard": "^14.2.3",
-    "tailwindcss": "^1.9.2"
+    "tailwindcss": "^1.9.4"
   },
   "scripts": {
     "dev": "next",
