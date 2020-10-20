@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Highlight } from 'react-fast-highlight';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
