@@ -10,7 +10,7 @@
     "@personnummer/generate": "^1.0.2",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.8.6",
-    "marked": "^1.2.2",
+    "marked": "^1.2.3",
     "next": "^10.0.1",
     "node-fetch": "^2.6.1",
     "personnummer": "^3.1.0",
