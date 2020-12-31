@@ -16,7 +16,7 @@
     "personnummer": "^3.1.1",
     "postcss-easy-import": "^3.0.0",
     "prettier": "^2.2.1",
-    "qrcode.react": "^1.0.0",
+    "qrcode.react": "^1.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "semistandard": "^16.0.0",
