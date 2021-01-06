@@ -9,7 +9,7 @@
   "dependencies": {
     "@personnummer/generate": "^1.0.2",
     "@zeit/next-css": "^1.0.1",
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^10.2.0",
     "marked": "^1.2.7",
     "next": "^10.0.4",
     "node-fetch": "^2.6.1",
