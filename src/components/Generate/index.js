@@ -7,7 +7,7 @@ const generatePersonnummer = (y, m, d) => {
   return generate(new Date(y, m, d));
 };
 
-export default props => {
+export default (props) => {
   const today = new Date();
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth() + 1);
@@ -15,7 +15,7 @@ export default props => {
   const [pin, setPin] = useState('');
 
   const generate = (year, month, day) => {
-    setPin(generatePersonnummer(year, month, day));
+    setPin(generatePersonnummer(year, month - 1, day));
   };
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default props => {
             type="number"
             min="1"
             defaultValue={year}
-            onChange={e => {
+            onChange={(e) => {
               setYear(e.target.value);
               generate(year, month, day);
             }}
@@ -53,7 +53,7 @@ export default props => {
             min="1"
             max="12"
             defaultValue={month}
-            onChange={e => {
+            onChange={(e) => {
               setMonth(e.target.value);
               generate(year, month, day);
             }}
@@ -71,7 +71,7 @@ export default props => {
             min="1"
             max="31"
             defaultValue={day}
-            onChange={e => {
+            onChange={(e) => {
               setDay(e.target.value);
               generate(year, month, day);
             }}
