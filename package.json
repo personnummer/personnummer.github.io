@@ -30,5 +30,8 @@
     "lint": "semistandard",
     "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
     "update": "node scripts/implementations.js"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1"
   }
 }
