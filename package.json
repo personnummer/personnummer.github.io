@@ -32,6 +32,6 @@
     "update": "node scripts/implementations.js"
   },
   "devDependencies": {
-    "webpack": "^4.44.1"
+    "webpack": "^5.24.1"
   }
 }
