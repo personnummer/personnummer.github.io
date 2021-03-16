@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const marked = require('marked');
 const fs = require('fs');
 const path = require('path');
+const prettier = require('prettier');
 
 (async () => {
   const res = await fetch('https://raw.githubusercontent.com/personnummer/meta/master/README.md');
@@ -24,12 +25,16 @@ const path = require('path');
 
   const template = `import Block from '../Block';
 
-  export default props => (
+  const Implementations = (props) => (
     <Block {...props}>
     ${table}
     </Block>
-  );`;
+  );
 
-  fs.writeFileSync(path.join(__dirname, '..', 'src', 'components', 'Implementations', 'index.js'), template);
-  console.log('Updated Implementations component');
+  export default Implementations;`;
+
+  prettier.resolveConfig(path.join(__dirname, '..', '.prettierrc')).then((options) => {
+    fs.writeFileSync(path.join(__dirname, '..', 'src', 'components', 'Implementations', 'index.js'), prettier.format(template, options));
+    console.log('Updated Implementations component');
+  });
 })();
