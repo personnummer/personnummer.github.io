@@ -4,6 +4,10 @@ export default [
     link: 'https://github.com/personnummer/bash'
   },
   {
+    name: 'C / C++',
+    link: 'https://github.com/personnummer/cpp'
+  },
+  {
     name: 'C#',
     link: 'https://github.com/personnummer/csharp'
   },
