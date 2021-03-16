@@ -1,4 +1,4 @@
-export default ({ border = true, children, className, title = '' }) => (
+const Block = ({ border = true, children, className, title = '' }) => (
   <div className={`mt-5 ${className}`}>
     {title && (
       <h2
@@ -13,3 +13,5 @@ export default ({ border = true, children, className, title = '' }) => (
     {children}
   </div>
 );
+
+export default Block;

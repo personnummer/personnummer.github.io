@@ -1,4 +1,11 @@
-const withCSS = require('@zeit/next-css');
-module.exports = withCSS({
-  trailingSlash: true
-});
+module.exports = {
+  trailingSlash: true,
+  future: {
+    webpack5: true
+  },
+  webpack: function (config, options) {
+    console.log(`Using Webpack ${options.webpack.version}`);
+    config.experiments = {};
+    return config;
+  }
+};
