@@ -4,7 +4,7 @@ export default [
     link: 'https://github.com/personnummer/bash'
   },
   {
-    name: 'C / C++',
+    name: 'C/C++',
     link: 'https://github.com/personnummer/cpp'
   },
   {
