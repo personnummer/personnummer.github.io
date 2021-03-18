@@ -19,7 +19,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "semistandard": "^16.0.0",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.4"
   },
   "scripts": {
     "dev": "next",
