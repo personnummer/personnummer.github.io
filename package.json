@@ -8,18 +8,18 @@
   "license": "ISC",
   "dependencies": {
     "@personnummer/generate": "^1.0.2",
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.2",
     "marked": "^3.0.0",
-    "next": "^11.0.0",
+    "next": "^11.1.0",
     "node-fetch": "^2.6.1",
     "personnummer": "^3.1.4",
-    "postcss": "^8.3.4",
-    "prettier": "^2.3.1",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "semistandard": "^16.0.1",
-    "tailwindcss": "^2.1.4",
+    "tailwindcss": "^2.2.7",
     "webpack": "5.51.1"
   },
   "scripts": {
