@@ -8,6 +8,11 @@ const languages = require('../data/languages').default.sort((a, b) =>
   a.name.localeCompare(b.name)
 );
 
+const users = require('../data/users').default.sort((a, b) =>
+  a.name.localeCompare(b.name)
+);
+
+
 const Index = () => {
   return (
     <>
@@ -161,6 +166,35 @@ const Index = () => {
           Clojure
         </a>
       </p>
+
+      <Block title='who is using this' className='mb-20'>
+        <div className="mt-5">
+          {users.filter(m => m.link && m.name && m.image).map((m,mi) => (
+            <a key={mi} href={m.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={m.image}
+                alt={m.name}
+                width={m.width ? m.width : 100}
+                height={m.height ? m.height : 100}
+                className="rounded-md border border-gray-200 border-solid"
+              />
+            </a>
+          ))}
+        </div>
+        <div className="mt-5">
+          <p>
+            add your logo{' '}
+            <a
+              href="https://github.com/personnummer/personnummer.github.io/blob/develop/src/data/users.js"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='text-blue-500 hover:underline'
+            >
+              here
+            </a>
+          </p>
+        </div>
+      </Block>
 
       <Block title='license' className='mb-20'>
         <p>
