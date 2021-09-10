@@ -2,7 +2,7 @@ import Block from '../Block';
 
 const Implementations = (props) => (
   <Block {...props}>
-    <div className="overflow-auto">
+    <div className="lg:overflow-auto">
       <table className="lg:table-fixed w-full">
         <thead>
           <tr>
