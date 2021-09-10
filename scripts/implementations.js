@@ -37,7 +37,7 @@ const prettier = require('prettier');
 
   const Implementations = (props) => (
     <Block {...props}>
-      <div className="lg:overflow-auto">
+      <div className="overflow-auto lg:overflow-visible">
         ${table}
       </div>
     </Block>
