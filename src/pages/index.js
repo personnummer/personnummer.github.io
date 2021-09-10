@@ -174,6 +174,7 @@ const Index = () => {
               <img
                 src={m.image}
                 alt={m.name}
+                title={m.name}
                 width={m.width ? m.width : 100}
                 height={m.height ? m.height : 100}
                 className="rounded-md border border-gray-200 border-solid"
