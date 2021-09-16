@@ -155,10 +155,10 @@ const Implementations = (props) => (
               <a
                 className="text-blue-500 hover:underline"
                 rel="noopener noreferrer"
-                href="https://ci.appveyor.com/project/frozzare/csharp/branch/master"
+                href="https://github.com/personnummer/csharp/actions"
               >
                 <img
-                  src="https://img.shields.io/appveyor/build/frozzare/csharp?style=flat-square"
+                  src="https://img.shields.io/github/workflow/status/personnummer/csharp/Test?style=flat-square"
                   alt="Build status"
                 />
               </a>
