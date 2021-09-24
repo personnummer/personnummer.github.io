@@ -175,7 +175,7 @@ const Index = () => {
         </a>
       </p>
 
-      <Block title="who is using this" className="mb-20">
+      <Block title="who is using this">
         <div className="mt-5">
           {users
             .filter((m) => m.link && m.name && m.image)
