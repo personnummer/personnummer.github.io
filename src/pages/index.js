@@ -15,9 +15,9 @@ const users = require('../data/users').default.sort((a, b) =>
 const Index = () => {
   return (
     <>
-      <Block title="validate swedish personal identity numbers">
+      <Block title="Validate swedish personal identity numbers">
         <p className="pt-3">
-          personnummer is a{' '}
+          Personnummer is a{' '}
           <a
             href="https://github.com/personnummer"
             target="_blank"
@@ -26,9 +26,9 @@ const Index = () => {
           >
             small open-source project
           </a>{' '}
-          that validates, formatting and determine sex and age from swedish
-          personal identity numbers. support the project by becoming a backer or
-          sponsor via{' '}
+          created to validate, format and determine sex and age from swedish
+          personal identity numbers. Support the project by becoming a backer or
+          sponsor at{' '}
           <a
             href="https://opencollective.com/personnummer"
             target="_blank"
@@ -71,8 +71,8 @@ const Index = () => {
           <li>determine if coordination number</li>
         </ul>
         <p className="pt-3">
-          all features might not be implemented in all languages, you can read
-          the full specification{' '}
+          All features might not be implemented in all languages.
+          Full specification can be found{' '}
           <a
             className="inline-block text-blue-500 cursor-pointer hover:underline"
             rel="noopener noreferrer"
@@ -87,21 +87,21 @@ const Index = () => {
 
       <Try title="try" />
 
-      <Generate title="generate personal identity numbers" />
+      <Generate title="Generate personal identity numbers" />
 
       <Implementations title="implementations" />
 
       <p className="pt-3">
-        some implementations may be in{' '}
+        Some implementations may be a{' '}
         <span className="rounded bg-gray-300 px-1">work in progress</span> if
         you find a bug, please open an issue in the specific implementation
         repository.
       </p>
 
       <p className="pt-3">
-        if an implementation in your favorite language is missing, feel free to
-        port it over from one of the existing versions. there's still plenty of
-        languages to contribute in:{' '}
+        If an implementation for your favorite language is missing, feel free to
+        port it over from one of the existing versions. There are still plenty of
+        languages to contribute to:{' '}
         <a
           target="_blank"
           href="https://www.r-project.org/"
@@ -175,7 +175,7 @@ const Index = () => {
         </a>
       </p>
 
-      <Block title="who is using this">
+      <Block title="Who is using Personnummer">
         <div className="mt-5">
           {users
             .filter((m) => m.link && m.name && m.image)
@@ -199,7 +199,7 @@ const Index = () => {
         </div>
         <div className="mt-5">
           <p>
-            add your logo{' '}
+            Add your logo{' '}
             <a
               href="https://github.com/personnummer/personnummer.github.io/blob/develop/src/data/users.js"
               target="_blank"
@@ -214,7 +214,7 @@ const Index = () => {
 
       <Block title="license" className="mb-20">
         <p>
-          all personnummer packages are under{' '}
+          All personnummer packages are released under the{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
