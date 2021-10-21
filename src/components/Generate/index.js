@@ -26,7 +26,7 @@ const Generate = (props) => {
   return (
     <Block {...props}>
       <div className="flex flex-wrap -mx-3 mb-2 pt-3">
-        <div class="w-full md:w-5/6">
+        <div className="w-full md:w-5/6">
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label className="block tracking-wide mb-2" htmlFor="g-year">
@@ -91,10 +91,10 @@ const Generate = (props) => {
             />
           </div>
         </div>
-        <div class="px-3">
+        <div className="px-3">
           <div>
             <p className="block tracking-wide mb-2">qr code</p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <QRCode
                 size={100}
                 value={personnummer.valid(pin) ? pin : 'not valid'}

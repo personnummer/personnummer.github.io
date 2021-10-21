@@ -83,9 +83,7 @@ export default class AppDocument extends Document {
           <Main />
           <NextScript />
           {isProduction && (
-            <>
-              <script dangerouslySetInnerHTML={this.setGoogleAnalytics()} />
-            </>
+              <script dangerouslySetInnerHTML={this.setGoogleAnalytics()}>
           )}
         </body>
       </Html>
