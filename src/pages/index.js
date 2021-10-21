@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
@@ -62,7 +63,7 @@ const Index = () => {
         </p>
       </Block>
 
-      <Block title="features">
+      <Block title="Features">
         <ul className="list-decimal ml-4">
           <li>validation</li>
           <li>formatting</li>
@@ -71,8 +72,8 @@ const Index = () => {
           <li>determine if coordination number</li>
         </ul>
         <p className="pt-3">
-          All features might not be implemented in all languages.
-          Full specification can be found{' '}
+          All features might not be implemented in all languages. Full
+          specification can be found{' '}
           <a
             className="inline-block text-blue-500 cursor-pointer hover:underline"
             rel="noopener noreferrer"
@@ -85,11 +86,11 @@ const Index = () => {
         </p>
       </Block>
 
-      <Try title="try" />
+      <Try title="Try" />
 
       <Generate title="Generate personal identity numbers" />
 
-      <Implementations title="implementations" />
+      <Implementations title="Implementations" />
 
       <p className="pt-3">
         Some implementations may be a{' '}
@@ -100,8 +101,8 @@ const Index = () => {
 
       <p className="pt-3">
         If an implementation for your favorite language is missing, feel free to
-        port it over from one of the existing versions. There are still plenty of
-        languages to contribute to:{' '}
+        port it over from one of the existing versions. There are still plenty
+        of languages to contribute to:{' '}
         <a
           target="_blank"
           href="https://www.r-project.org/"
@@ -186,7 +187,7 @@ const Index = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src={m.image}
                   alt={m.name}
                   title={m.name}
@@ -212,7 +213,7 @@ const Index = () => {
         </div>
       </Block>
 
-      <Block title="license" className="mb-20">
+      <Block title="License" className="mb-20">
         <p>
           All personnummer packages are released under the{' '}
           <a

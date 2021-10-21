@@ -89,7 +89,7 @@ const Try = (props) => {
       </table>
       <p className="mt-3 italic">
         using javascript version{' '}
-        {pkg.dependencies.personnummer.replace('^', '')}
+        {pkg.devDependencies.personnummer.replace('^', '')}
       </p>
     </Block>
   );
