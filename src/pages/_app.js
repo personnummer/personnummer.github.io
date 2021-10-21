@@ -18,14 +18,15 @@ export default class Application extends App {
               content="width=device-width, initial-scale=1"
             />
           </Head>
-          <div className="text-center mb-5">
-            <img
-              src="/apple-touch-icon.png"
-              alt="Personnummer"
-              width="48"
-              height="48"
-            />
-            <h1 className="text-4xl md:text-5xl text-gray-700">personnummer</h1>
+          <div>
+            <h1 className="text-4xl md:text-5xl text-center text-gray-700">
+              <img
+                alt="Personnummer"
+                src="/apple-touch-icon.png"
+                className="w-8 sm:w-12 inline-block"
+              />{' '}
+              personnummer
+            </h1>
           </div>
           <Component {...pageProps} />
         </div>
