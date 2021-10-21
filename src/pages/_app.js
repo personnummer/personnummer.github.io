@@ -1,7 +1,6 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 import '../styles/main.css';
 
@@ -20,7 +19,7 @@ export default class Application extends App {
             />
           </Head>
           <div className="text-center mb-5">
-            <Image
+            <img
               src="/apple-touch-icon.png"
               alt="Personnummer"
               width="48"

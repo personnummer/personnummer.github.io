@@ -187,7 +187,7 @@ const Index = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   src={m.image}
                   alt={m.name}
                   title={m.name}

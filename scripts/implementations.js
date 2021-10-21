@@ -33,9 +33,7 @@ const prettier = require('prettier');
   );
   table = table.replace(/><\/a>/g, '/></a>');
 
-  const template = `/* eslint-disable @next/next/no-img-element */
-
-  import Block from '../Block';
+  const template = `import Block from '../Block';
 
   const Implementations = (props) => (
     <Block {...props}>
