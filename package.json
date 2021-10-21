@@ -6,9 +6,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@personnummer/generate": "^1.0.2",
     "autoprefixer": "^10.3.7",
+    "eslint-config-next": "11.1.2",
     "marked": "^3.0.7",
     "next": "^11.1.2",
     "node-fetch": "2.6.5",
