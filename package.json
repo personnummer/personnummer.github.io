@@ -19,7 +19,7 @@
     "qrcode.react": "1.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tailwindcss": "2.2.18",
+    "tailwindcss": "2.2.19",
     "webpack": "5.60.0"
   },
   "scripts": {
