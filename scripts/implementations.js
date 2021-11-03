@@ -9,7 +9,8 @@ const prettier = require('prettier');
     'https://raw.githubusercontent.com/personnummer/meta/master/README.md'
   );
   const text = await res.text();
-  const html = marked(text)
+  const html = marked
+    .parse(text)
     .trim()
     .replace(/(\r\n|\n|\r)/gm, '');
   const output = /<table>(.*?)<\/table>/.exec(html);

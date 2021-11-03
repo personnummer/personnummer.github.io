@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import Block from '../Block';
 
 const Implementations = (props) => (
