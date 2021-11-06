@@ -9,9 +9,9 @@
   "devDependencies": {
     "@personnummer/generate": "1.0.2",
     "autoprefixer": "10.4.0",
-    "eslint-config-next": "12.0.2",
-    "marked": "3.0.0",
-    "next": "12.0.2",
+    "eslint-config-next": "12.0.3",
+    "marked": "3.0.8",
+    "next": "12.0.3",
     "node-fetch": "2.6.6",
     "personnummer": "3.1.4",
     "postcss": "8.3.11",
@@ -20,7 +20,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tailwindcss": "2.2.19",
-    "webpack": "5.61.0"
+    "webpack": "5.62.1"
   },
   "scripts": {
     "dev": "next",
