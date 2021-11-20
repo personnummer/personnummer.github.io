@@ -20,7 +20,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tailwindcss": "2.2.19",
-    "webpack": "5.64.1"
+    "webpack": "5.64.2"
   },
   "scripts": {
     "dev": "next",
