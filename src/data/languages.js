@@ -71,4 +71,8 @@ export default [
     name: 'Swift',
     link: 'https://github.com/personnummer/swift',
   },
+  {
+    name: 'V',
+    link: 'https://github.com/personnummer/v',
+  },
 ];
