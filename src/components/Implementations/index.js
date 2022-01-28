@@ -968,6 +968,59 @@ const Implementations = (props) => (
               </a>
             </td>
           </tr>
+          <tr>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/v"
+              >
+                V
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/v"
+              >
+                <img
+                  src="https://img.shields.io/github/v/release/personnummer/v?style=flat-square"
+                  alt="GitHub release (latest by date)"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/meta/#package-specification-v3"
+              >
+                3.0
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/v/actions"
+              >
+                <img
+                  src="https://img.shields.io/github/workflow/status/personnummer/v/test?style=flat-square"
+                  alt="GitHub Workflow Status"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/frozzare"
+              >
+                @frozzare
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
