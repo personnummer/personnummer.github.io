@@ -1,12 +1,17 @@
 export default [
-    {
-        name: 'Personnummer',
-        image: 'https://avatars.githubusercontent.com/u/32910698?s=200&v=4',
-        link: 'https://personnummer.dev/'
-    }
+  {
+    name: 'Personnummer',
+    image: 'https://avatars.githubusercontent.com/u/32910698?s=200&v=4',
+    link: 'https://personnummer.dev/',
+  },
+  {
+    name: 'Organisationsnummer',
+    image: 'https://avatars.githubusercontent.com/u/96255764?s=200&v=4',
+    link: 'https://organisationsnummer.dev/',
+  },
 
-    /* example */
-    /*
+  /* example */
+  /*
     {
         name: 'Personnummer',
         image: 'https://avatars.githubusercontent.com/u/32910698?s=200&v=4',
@@ -15,4 +20,4 @@ export default [
         link: 'https://personnummer.dev/'
     }
     */
-]
+];
