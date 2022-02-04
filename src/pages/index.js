@@ -176,7 +176,7 @@ const Index = () => {
       </p>
 
       <Block title="Who is using Personnummer">
-        <div className="mt-5">
+        <div className="mt-5 flex gap-2">
           {users
             .filter((m) => m.link && m.name && m.image)
             .map((m, mi) => (
