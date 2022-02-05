@@ -29,7 +29,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "lint",
+    "lint": "next lint && tsc",
     "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
     "update": "node scripts/implementations.js"
   }
