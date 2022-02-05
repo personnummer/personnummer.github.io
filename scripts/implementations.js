@@ -56,7 +56,7 @@ const prettier = require('prettier');
           'src',
           'components',
           'Implementations',
-          'index.js'
+          'index.tsx'
         ),
         prettier.format(template, options)
       );
