@@ -1,4 +1,14 @@
-export default [
+type User = {
+  name: string,
+  image: string,
+  link: string,
+  width?: number,
+  height?: number,
+};
+
+type Users = User[];
+
+const users: Users = [
   {
     name: 'Personnummer',
     image: 'https://avatars.githubusercontent.com/u/32910698?s=200&v=4',
@@ -21,3 +31,5 @@ export default [
     }
     */
 ];
+
+export default users;

@@ -1,14 +1,23 @@
 import { useState } from 'react';
 import personnummer from 'personnummer';
-import Block from '../Block';
+import Block, { BlockProps } from '../Block';
 import pkg from '../../../package.json';
 
-const getPersonnummerObj = (pin) => {
+type Output = {
+  age: number;
+  long: string;
+  sex: string;
+  short: string;
+  con: boolean;
+  valid: boolean;
+};
+
+const getPersonnummerObj = (pin: string): Output => {
   const output = {
-    age: 'n/a',
+    age: 0,
     long: 'n/a',
-    sex: 'n/a',
     short: 'n/a',
+    sex: 'n/a',
     con: false,
     valid: personnummer.valid(pin),
   };
@@ -34,7 +43,7 @@ const getPersonnummerObj = (pin) => {
   return output;
 };
 
-const Try = (props) => {
+const Try = (props: BlockProps) => {
   const [pin, setPin] = useState('');
   const pnrObj = getPersonnummerObj(pin);
 

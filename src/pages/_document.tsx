@@ -1,7 +1,13 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document';
 
 export default class AppDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const isProduction = process.env.NODE_ENV === 'production';
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps, isProduction };
@@ -20,7 +26,7 @@ export default class AppDocument extends Document {
   }
 
   render() {
-    const { isProduction } = this.props;
+    const { isProduction } = this.props as typeof this.props & { isProduction: boolean };
 
     return (
       <Html lang="en">

@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react';
 import personnummer from 'personnummer';
 import generate from '@personnummer/generate';
 import QRCode from 'qrcode.react';
-import Block from '../Block';
+import Block, { BlockProps } from '../Block';
 
-const generatePersonnummer = (y, m, d) => {
-  return generate(new Date(y, m, d));
-};
+const generatePersonnummer = (y: number, m: number, d: number) =>
+  generate(new Date(y, m, d));
 
-const Generate = (props) => {
+const Generate = (props: BlockProps) => {
   const today = new Date();
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth() + 1);
   const [day, setDay] = useState(today.getDate());
   const [pin, setPin] = useState('');
 
-  const generate = (year, month, day) => {
+  const generate = (year: number, month: number, day: number) => {
     setPin(generatePersonnummer(year, month - 1, day));
   };
 
@@ -39,8 +38,8 @@ const Generate = (props) => {
                 min="1"
                 defaultValue={year}
                 onChange={(e) => {
-                  setYear(e.target.value);
-                  generate(e.target.value, month, day);
+                  setYear(Number(e.target.value));
+                  generate(Number(e.target.value), month, day);
                 }}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
@@ -57,8 +56,8 @@ const Generate = (props) => {
                 max="12"
                 defaultValue={month}
                 onChange={(e) => {
-                  setMonth(e.target.value);
-                  generate(year, e.target.value, day);
+                  setMonth(Number(e.target.value));
+                  generate(year, Number(e.target.value), day);
                 }}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
@@ -75,8 +74,8 @@ const Generate = (props) => {
                 max="31"
                 defaultValue={day}
                 onChange={(e) => {
-                  setDay(e.target.value);
-                  generate(year, month, e.target.value);
+                  setDay(Number(e.target.value));
+                  generate(year, month, Number(e.target.value));
                 }}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />

@@ -1,4 +1,11 @@
-export default [
+type Language = {
+  name: string,
+  link: string,
+};
+
+type Languages = Language[];
+
+const languages: Languages = [
   {
     name: 'Bash',
     link: 'https://github.com/personnummer/bash',
@@ -76,3 +83,5 @@ export default [
     link: 'https://github.com/personnummer/v',
   },
 ];
+
+export default languages;

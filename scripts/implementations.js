@@ -34,9 +34,9 @@ const prettier = require('prettier');
   );
   table = table.replace(/><\/a>/g, '/></a>');
 
-  const template = `import Block from '../Block';
+  const template = `import Block, { BlockProps } from '../Block';
 
-  const Implementations = (props) => (
+  const Implementations = (props: BlockProps) => (
     <Block {...props}>
       <div className="overflow-auto lg:overflow-visible">
         ${table}
