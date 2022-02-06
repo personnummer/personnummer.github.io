@@ -1,6 +1,6 @@
-import Block from '../Block';
+import Block, { BlockProps } from '../Block';
 
-const Implementations = (props) => (
+const Implementations = (props: BlockProps) => (
   <Block {...props}>
     <div className="overflow-auto lg:overflow-visible">
       <table className="lg:table-fixed w-full">

@@ -30,7 +30,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint && tsc",
-    "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
+    "format": "prettier --single-quote --write 'src/**/*.ts*'",
     "update": "node scripts/implementations.js"
   }
 }
