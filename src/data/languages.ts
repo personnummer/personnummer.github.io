@@ -1,6 +1,6 @@
 type Language = {
-  name: string,
-  link: string,
+  name: string;
+  link: string;
 };
 
 type Languages = Language[];
@@ -8,80 +8,80 @@ type Languages = Language[];
 const languages: Languages = [
   {
     name: 'Bash',
-    link: 'https://github.com/personnummer/bash',
+    link: 'https://github.com/personnummer/bash'
   },
   {
     name: 'C/C++',
-    link: 'https://github.com/personnummer/cpp',
+    link: 'https://github.com/personnummer/cpp'
   },
   {
     name: 'C#',
-    link: 'https://github.com/personnummer/csharp',
+    link: 'https://github.com/personnummer/csharp'
   },
   {
     name: 'D',
-    link: 'https://github.com/personnummer/d',
+    link: 'https://github.com/personnummer/d'
   },
   {
     name: 'Dart',
-    link: 'https://github.com/personnummer/dart',
+    link: 'https://github.com/personnummer/dart'
   },
   {
     name: 'Elixir',
-    link: 'https://github.com/personnummer/elixir',
+    link: 'https://github.com/personnummer/elixir'
   },
   {
     name: 'Go',
-    link: 'https://github.com/personnummer/go',
+    link: 'https://github.com/personnummer/go'
   },
   {
     name: 'Java',
-    link: 'https://github.com/personnummer/java',
+    link: 'https://github.com/personnummer/java'
   },
   {
     name: 'JavaScript',
-    link: 'https://github.com/personnummer/js',
+    link: 'https://github.com/personnummer/js'
   },
   {
     name: 'Kotlin',
-    link: 'https://github.com/personnummer/kotlin',
+    link: 'https://github.com/personnummer/kotlin'
   },
   {
     name: 'Lua',
-    link: 'https://github.com/personnummer/lua',
+    link: 'https://github.com/personnummer/lua'
   },
   {
     name: 'Perl',
-    link: 'https://github.com/personnummer/perl',
+    link: 'https://github.com/personnummer/perl'
   },
   {
     name: 'PHP',
-    link: 'https://github.com/personnummer/php',
+    link: 'https://github.com/personnummer/php'
   },
   {
     name: 'Python',
-    link: 'https://github.com/personnummer/python',
+    link: 'https://github.com/personnummer/python'
   },
   {
     name: 'Ruby',
-    link: 'https://github.com/personnummer/ruby',
+    link: 'https://github.com/personnummer/ruby'
   },
   {
     name: 'Rust',
-    link: 'https://github.com/personnummer/rust',
+    link: 'https://github.com/personnummer/rust'
   },
   {
     name: 'Scala',
-    link: 'https://github.com/personnummer/scala',
+    link: 'https://github.com/personnummer/scala'
   },
   {
     name: 'Swift',
-    link: 'https://github.com/personnummer/swift',
+    link: 'https://github.com/personnummer/swift'
   },
   {
     name: 'V',
-    link: 'https://github.com/personnummer/v',
-  },
+    link: 'https://github.com/personnummer/v'
+  }
 ];
 
 export default languages;

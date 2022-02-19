@@ -1,15 +1,15 @@
 export type BlockProps = Partial<{
-  border: boolean,
-  children: any,
-  className: string,
-  title: string,
+  border: boolean;
+  children: any;
+  className: string;
+  title: string;
 }>;
 
 const Block = ({
   border = true,
   children,
   className,
-  title = '',
+  title = ''
 }: BlockProps) => (
   <div className={`mt-5 ${className}`}>
     {title && (

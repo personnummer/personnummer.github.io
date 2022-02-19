@@ -19,7 +19,7 @@ const getPersonnummerObj = (pin: string): Output => {
     short: 'n/a',
     sex: 'n/a',
     con: false,
-    valid: personnummer.valid(pin),
+    valid: personnummer.valid(pin)
   };
 
   if (typeof pin !== 'string') {
