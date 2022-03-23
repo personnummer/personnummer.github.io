@@ -390,6 +390,59 @@ const Implementations = (props: BlockProps) => (
               <a
                 className="text-blue-500 hover:underline"
                 rel="noopener noreferrer"
+                href="https://github.com/personnummer/haskell"
+              >
+                Haskell
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/haskell"
+              >
+                <img
+                  src="https://img.shields.io/github/v/release/personnummer/haskell?style=flat-square"
+                  alt="GitHub release (latest by date)"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/meta/#package-specification-v3"
+              >
+                3.0
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/haskell/actions"
+              >
+                <img
+                  src="https://img.shields.io/github/workflow/status/personnummer/haskell/Test%20and%20lint?style=flat-square"
+                  alt="GitHub Workflow Status"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/bombsimon"
+              >
+                @bombsimon
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
                 href="https://github.com/personnummer/java"
               >
                 Java
