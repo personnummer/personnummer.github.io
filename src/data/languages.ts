@@ -35,6 +35,10 @@ const languages: Languages = [
     link: 'https://github.com/personnummer/go'
   },
   {
+    name: 'Haskell',
+    link: 'https://github.com/personnummer/haskell'
+  },
+  {
     name: 'Java',
     link: 'https://github.com/personnummer/java'
   },
