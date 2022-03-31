@@ -27,7 +27,7 @@ const Index = () => (
         personal identity numbers. Support the project by becoming a backer or
         sponsor at{' '}
         <a
-          href="https://opencollective.com/personnummer"
+          href="https://opencollective.com/sweidproject"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
