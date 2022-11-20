@@ -12,7 +12,7 @@
     "@types/react": "18.0.25",
     "autoprefixer": "10.4.13",
     "eslint-config-next": "13.0.4",
-    "marked": "4.2.2",
+    "marked": "4.2.3",
     "next": "13.0.4",
     "personnummer": "3.1.4",
     "postcss": "8.4.19",
