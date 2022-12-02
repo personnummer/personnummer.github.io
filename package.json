@@ -9,7 +9,7 @@
   "devDependencies": {
     "@personnummer/generate": "1.0.2",
     "@types/node": "18.11.10",
-    "@types/react": "18.0.25",
+    "@types/react": "18.0.26",
     "autoprefixer": "10.4.13",
     "eslint-config-next": "13.0.6",
     "marked": "4.2.3",
