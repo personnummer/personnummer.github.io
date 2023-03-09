@@ -9,6 +9,7 @@ type Output = {
   sex: string;
   short: string;
   con: boolean;
+  interim: boolean;
   valid: boolean;
 };
 
