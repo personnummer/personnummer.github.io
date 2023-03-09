@@ -12,6 +12,11 @@ type Output = {
   valid: boolean;
 };
 
+const personnummerOptions = {
+  allowCoordinationNumber: true,
+  allowInterimNumber: true
+};
+
 const getPersonnummerObj = (pin: string): Output => {
   const output = {
     age: 0,
@@ -19,7 +24,8 @@ const getPersonnummerObj = (pin: string): Output => {
     short: 'n/a',
     sex: 'n/a',
     con: false,
-    valid: personnummer.valid(pin)
+    interim: false,
+    valid: personnummer.valid(pin, personnummerOptions)
   };
 
   if (typeof pin !== 'string') {
@@ -27,7 +33,7 @@ const getPersonnummerObj = (pin: string): Output => {
   }
 
   try {
-    const p = personnummer.parse(pin);
+    const p = personnummer.parse(pin, personnummerOptions);
 
     if (output.valid) {
       output.age = p.getAge();
@@ -35,6 +41,7 @@ const getPersonnummerObj = (pin: string): Output => {
       output.short = p.format();
       output.sex = p.isMale() ? 'male' : 'female';
       output.con = p.isCoordinationNumber();
+      output.interim = p.isInterimNumber();
     }
   } catch (err) {
     output.sex = 'n/a';
@@ -92,6 +99,16 @@ const Try = (props: BlockProps) => {
               }`}
             >
               {pnrObj.con ? 'yes' : 'no'}
+            </td>
+          </tr>
+          <tr>
+            <td className="border px-4 py-2">interim number</td>
+            <td
+              className={`border px-4 py-2 ${
+                pnrObj.interim ? 'text-green-500' : 'text-red-500'
+              }`}
+            >
+              {pnrObj.interim ? 'yes' : 'no'}
             </td>
           </tr>
         </tbody>

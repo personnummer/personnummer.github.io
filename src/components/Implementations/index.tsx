@@ -52,7 +52,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/bash/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/bash/CI?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/bash/bash.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -105,7 +105,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/cpp/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/cpp/Build?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/cpp/ccpp.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -158,7 +158,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/csharp/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/csharp/Test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/csharp/csharp.yml?branch=master"
                   alt="Build status"
                 />
               </a>
@@ -211,7 +211,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/d/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/d/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/d/d.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -264,7 +264,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/dart/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/dart/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/dart/test.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -317,7 +317,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/elixir/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/elixir/Elixir%20CI?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/elixir/elixir.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -370,7 +370,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/go/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/go/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/go/go.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -423,7 +423,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/haskell/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/haskell/Test%20and%20lint?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/haskell/haskell.yml?branch=main"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -476,7 +476,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/java/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/java/Test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/haskell/haskell.yml?branch=main"
                   alt="GitHub Workflow"
                 />
               </a>
@@ -517,9 +517,9 @@ const Implementations = (props: BlockProps) => (
               <a
                 className="text-blue-500 hover:underline"
                 rel="noopener noreferrer"
-                href="https://github.com/personnummer/meta/#package-specification-v3"
+                href="https://github.com/personnummer/meta/#package-specification-v31"
               >
-                3.0
+                3.1
               </a>
             </td>
             <td className="border px-4 py-2">
@@ -529,7 +529,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/js/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/js/build?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/js/nodejs.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -582,7 +582,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/kotlin/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/kotlin/Test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/kotlin/test.yml?branch=master"
                   alt="GitHub Workflow"
                 />
               </a>
@@ -635,7 +635,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/lua/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/lua/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/lua/lua.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -688,7 +688,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/php/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/php/PHP%20Composer?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/php/php.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -741,7 +741,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/perl/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/perl/CI?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/perl/perl.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -794,7 +794,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/python/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/python/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/python/python.yml?branch=master"
                   alt="GitHub Workflow"
                 />
               </a>
@@ -847,7 +847,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/ruby/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/ruby/build?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/ruby/ruby.yml?branch=master"
                   alt="GitHub Workflow"
                 />
               </a>
@@ -900,7 +900,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/rust/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/rust/Rust?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/rust/rust.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -953,7 +953,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/scala/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/scala/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/scala/scala.yml?branch=master"
                   alt="GitHub Workflow Status"
                 />
               </a>
@@ -1006,7 +1006,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/swift/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/swift/build?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/swift/swift.yml?branch=master"
                   alt="GitHub Workflow"
                 />
               </a>
@@ -1059,7 +1059,7 @@ const Implementations = (props: BlockProps) => (
                 href="https://github.com/personnummer/v/actions"
               >
                 <img
-                  src="https://img.shields.io/github/workflow/status/personnummer/v/test?style=flat-square"
+                  src="https://img.shields.io/github/actions/workflow/status/personnummer/v/v.yml?branch=main"
                   alt="GitHub Workflow Status"
                 />
               </a>
