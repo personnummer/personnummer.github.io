@@ -257,7 +257,8 @@ export async function getStaticProps() {
     .map((x) => ({
       ...x,
       spec: `${x.spec}`.length === 1 ? `${x.spec}.0` : `${x.spec}`
-    }));
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return { props: { pkgs } };
 }
