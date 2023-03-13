@@ -253,6 +253,10 @@ export async function getStaticProps() {
     .map((x) => ({
       ...x,
       ...YAML.parse(x.content)
+    }))
+    .map((x) => ({
+      ...x,
+      spec: `${x.spec}`
     }));
 
   return { props: { pkgs } };

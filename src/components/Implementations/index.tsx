@@ -56,10 +56,9 @@ const Implementations = (props: ImplementationsProps) => (
                 <a
                   className="text-blue-500 hover:underline"
                   rel="noopener noreferrer"
-                  href={`https://github.com/personnummer/meta/#package-specification-v${pkg.spec.replace(
-                    '.',
-                    ''
-                  )}`}
+                  href={`https://github.com/personnummer/meta/#package-specification-v${pkg.spec
+                    .replace(/(\d).0/, '$1')
+                    .replace('.', '')}`}
                 >
                   <img
                     src={`https://img.shields.io/static/v1?label=spec&message=${pkg.spec}&color=blue&style=flat-square`}
