@@ -7,6 +7,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@octokit/rest": "^19.0.7",
     "@personnummer/generate": "1.0.3",
     "@types/node": "18.15.1",
     "@types/react": "18.0.28",
@@ -22,7 +23,8 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.2.7",
     "typescript": "4.9.5",
-    "undici": "5.21.0"
+    "undici": "5.21.0",
+    "yaml": "^1.10.2"
   },
   "scripts": {
     "dev": "next",
@@ -32,9 +34,5 @@
     "lint": "next lint && tsc",
     "format": "prettier --single-quote --write 'src/**/*.ts*'",
     "update": "node scripts/implementations.js"
-  },
-  "dependencies": {
-    "@octokit/rest": "^19.0.7",
-    "yaml": "^1.10.2"
   }
 }

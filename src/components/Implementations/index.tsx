@@ -28,7 +28,7 @@ const Implementations = (props: ImplementationsProps) => (
         </thead>
         <tbody>
           {props.pkgs?.map((pkg) => (
-            <tr>
+            <tr key={pkg.repo}>
               <td className="border px-4 py-2">
                 <a
                   className="text-blue-500 hover:underline"
