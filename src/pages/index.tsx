@@ -243,10 +243,11 @@ export async function getStaticProps() {
     .map((x: any) => ({
       content: x.value.data.content,
       branch: /ref=(\w+)/.exec(x.value.data.url)[1],
+      repo: x.value.data.html_url
     }))
     .map((x) => ({
       ...x,
-      repo: x.value.data.html_url.replace(`/blob/${x.branch}/.meta.yaml`, '')
+      repo: x.repo.replace(`/blob/${x.branch}/.meta.yaml`, ''),
       content: Buffer.from(x.content, 'base64').toString()
     }))
     .map((x) => ({
