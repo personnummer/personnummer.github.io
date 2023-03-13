@@ -240,13 +240,13 @@ export async function getStaticProps() {
 
   const pkgs = files
     .filter(({ status }) => status === 'fulfilled')
-    .map((x) => ({
+    .map((x: any) => ({
       content: x.value.data.content,
       branch: /ref=(\w+)/.exec(x.value.data.url)[1],
-      repo: x.value.data.html_url.replace('/blob/master/.meta.yaml', '')
     }))
     .map((x) => ({
       ...x,
+      repo: x.value.data.html_url.replace(`/blob/${x.branch}/.meta.yaml`, '')
       content: Buffer.from(x.content, 'base64').toString()
     }))
     .map((x) => ({
