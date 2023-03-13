@@ -15,14 +15,13 @@ jobs:
         with:
           node-version: 16.x
       - name: Install and build.
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
         run: |
           npm ci
           npm run build
           npm run export
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       - name: Deploy!
         uses: demurgos/ga-deploy-git@v1
         if: ${{ github.event_name == 'push' }}
