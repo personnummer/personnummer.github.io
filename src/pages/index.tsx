@@ -256,7 +256,7 @@ export async function getStaticProps() {
     }))
     .map((x) => ({
       ...x,
-      spec: `${x.spec}`
+      spec: `${x.spec}`.length === 1 ? `${x.spec}.0` : `${x.spec}`
     }));
 
   return { props: { pkgs } };
