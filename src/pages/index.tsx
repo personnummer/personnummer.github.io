@@ -1,16 +1,15 @@
 import React from 'react';
+import YAML from 'yaml';
+import { Octokit } from '@octokit/rest';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
 import Generate from '../components/Generate';
-import languagesData from '../data/languages';
 import usersData from '../data/users';
-
-const languages = languagesData.sort((a, b) => a.name.localeCompare(b.name));
 
 const users = usersData.sort((a, b) => a.name.localeCompare(b.name));
 
-const Index = () => (
+const Index = ({ pkgs = [] }) => (
   <>
     <Block title="Validate swedish personal identity numbers">
       <p className="pt-3">
@@ -38,9 +37,9 @@ const Index = () => (
       </p>
       <p className="pt-5 text-center">
         <span className="text-gray-500 pr-1">available in:</span>
-        {languages.map((l, li) => (
+        {pkgs.map((l, li) => (
           <span key={li}>
-            {li + 1 === languages.length && (
+            {li + 1 === pkgs.length && (
               <span className="text-gray-500 pr-1">and for</span>
             )}
             <a
@@ -51,9 +50,7 @@ const Index = () => (
             >
               {l.name}
             </a>
-            <span className="pr-1">
-              {li >= languages.length - 2 ? '' : ','}
-            </span>
+            <span className="pr-1">{li >= pkgs.length - 2 ? '' : ','}</span>
           </span>
         ))}
       </p>
@@ -86,7 +83,7 @@ const Index = () => (
 
     <Generate title="Generate personal identity numbers" />
 
-    <Implementations title="Implementations" />
+    <Implementations title="Implementations" pkgs={pkgs} />
 
     <p className="pt-3">
       Some implementations may be a{' '}
@@ -220,5 +217,44 @@ const Index = () => (
     </Block>
   </>
 );
+
+export async function getStaticProps() {
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN
+  });
+
+  const repos = await octokit.rest.repos.listForOrg({
+    org: 'personnummer',
+    type: 'public'
+  });
+
+  const files = await Promise.allSettled(
+    repos.data.map(async (repo) =>
+      octokit.rest.repos.getContent({
+        owner: 'personnummer',
+        repo: repo.name,
+        path: '.meta.yaml'
+      })
+    )
+  );
+
+  const pkgs = files
+    .filter(({ status }) => status === 'fulfilled')
+    .map((x) => ({
+      content: x.value.data.content,
+      branch: /ref=(\w+)/.exec(x.value.data.url)[1],
+      repo: x.value.data.html_url.replace('/blob/master/.meta.yaml', '')
+    }))
+    .map((x) => ({
+      ...x,
+      content: Buffer.from(x.content, 'base64').toString()
+    }))
+    .map((x) => ({
+      ...x,
+      ...YAML.parse(x.content)
+    }));
+
+  return { props: { pkgs } };
+}
 
 export default Index;

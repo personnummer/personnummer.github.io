@@ -32,5 +32,9 @@
     "lint": "next lint && tsc",
     "format": "prettier --single-quote --write 'src/**/*.ts*'",
     "update": "node scripts/implementations.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^19.0.7",
+    "yaml": "^1.10.2"
   }
 }
