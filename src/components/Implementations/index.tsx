@@ -87,7 +87,7 @@ const Implementations = (props: ImplementationsProps) => (
                 <a
                   className="text-blue-500 hover:underline"
                   rel="noopener noreferrer"
-                  href={`https://github.com/${pkg.maintainer}`}
+                  href={`https://github.com/${pkg.maintainer.slice(1)}`}
                 >
                   {pkg.maintainer}
                 </a>
