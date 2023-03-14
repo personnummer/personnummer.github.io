@@ -11,7 +11,7 @@ jobs:
       - name: Set up node.
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: 16.x
+          node-version: 18.x
       - name: Lint
         run: |
           npm ci

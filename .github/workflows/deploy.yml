@@ -1,22 +1,26 @@
-name: "Install and build"
+name: "Deploy"
 
 on:
   push:
     branches:
       - develop
 
+  schedule:
+    - cron: "0 9-23 * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v2.4.0
       - name: Set up node.
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v2.5.0
         with:
-          node-version: 16.x
-      - name: Install and build.
+          node-version: 18.x
+      - name: Install
+        run: npm ci
+      - name: Build and export
         run: |
-          npm ci
           npm run build
           npm run export
         env:
