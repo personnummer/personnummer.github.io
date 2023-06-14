@@ -60,8 +60,9 @@ const Try = (props: BlockProps) => {
       <p className="pt-3">input</p>
       <input
         type="text"
+        placeholder="YYMMDDXXXX"
         onChange={(e) => setPin(e.target.value)}
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       <p className="pt-3">result</p>
       <table className="table-fixed w-full">
