@@ -49,6 +49,7 @@ const Index = ({ pkgs = [] }) => (
               href={l.link}
             >
               {l.name}
+              {li + 1 === pkgs.length && '.'}
             </a>
             <span className="pr-1">{li >= pkgs.length - 2 ? '' : ','}</span>
           </span>
@@ -168,6 +169,7 @@ const Index = ({ pkgs = [] }) => (
       >
         Erlang
       </a>
+      .
     </p>
 
     <Block title="Who is using Personnummer">
@@ -198,6 +200,7 @@ const Index = ({ pkgs = [] }) => (
           >
             here
           </a>
+          .
         </p>
       </div>
     </Block>
