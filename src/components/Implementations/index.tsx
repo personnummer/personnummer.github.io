@@ -7,6 +7,7 @@ type Pkg = {
   maintainer: string;
   repo: string;
   workflow: string;
+  unmaintained?: boolean;
 };
 
 type ImplementationsProps = BlockProps & {
@@ -84,13 +85,26 @@ const Implementations = (props: ImplementationsProps) => (
                 </a>
               </td>
               <td className="border px-4 py-2">
-                <a
-                  className="text-blue-500 hover:underline"
-                  rel="noopener noreferrer"
-                  href={`https://github.com/${pkg.maintainer.slice(1)}`}
-                >
-                  {pkg.maintainer}
-                </a>
+                {pkg.unmaintained ? (
+                  <a
+                    className="text-blue-500 hover:underline"
+                    rel="noopener noreferrer"
+                    href="https://github.com/personnummer/meta"
+                  >
+                    <img
+                      src="https://img.shields.io/static/v1?label=&message=unmaintained&color=555555&style=flat-square"
+                      alt="Help wanted"
+                    />
+                  </a>
+                ) : (
+                  <a
+                    className="text-blue-500 hover:underline"
+                    rel="noopener noreferrer"
+                    href={`https://github.com/${pkg.maintainer.slice(1)}`}
+                  >
+                    {pkg.maintainer}
+                  </a>
+                )}
               </td>
             </tr>
           ))}
