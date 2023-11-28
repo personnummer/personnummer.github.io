@@ -31,5 +31,8 @@
     "export": "next export",
     "lint": "next lint && tsc",
     "format": "prettier --single-quote --write 'src/**/*.ts*'"
+  },
+  "overrides": {
+    "@typescript-eslint/parser": "6.13.1"
   }
 }
