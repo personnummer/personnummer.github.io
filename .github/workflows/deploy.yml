@@ -33,7 +33,6 @@ jobs:
       - name: Build and export
         run: |
           npm run build
-          npm run export
         env:
           CI: true
           GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
