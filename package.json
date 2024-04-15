@@ -32,6 +32,6 @@
     "format": "prettier --single-quote --write 'src/**/*.ts*'"
   },
   "overrides": {
-    "@typescript-eslint/parser": "7.6.0"
+    "@typescript-eslint/parser": "7.7.0"
   }
 }
