@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@octokit/rest": "^20.0.2",
+    "@octokit/rest": "^20.1.1",
     "@personnummer/generate": "1.0.3",
     "@types/node": "20.12.11",
     "@types/react": "18.3.2",
@@ -22,7 +22,7 @@
     "react-dom": "18.3.1",
     "tailwindcss": "3.4.3",
     "typescript": "5.4.5",
-    "yaml": "^2.3.4"
+    "yaml": "^2.4.2"
   },
   "scripts": {
     "dev": "next",
