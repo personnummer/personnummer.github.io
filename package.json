@@ -15,7 +15,7 @@
     "eslint-config-next": "14.2.7",
     "next": "14.2.7",
     "personnummer": "3.2.1",
-    "postcss": "8.4.41",
+    "postcss": "8.4.42",
     "prettier": "3.3.3",
     "qrcode.react": "3.1.0",
     "react": "18.3.1",
