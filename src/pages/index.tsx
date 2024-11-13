@@ -46,7 +46,7 @@ const Index = ({ pkgs = [] }) => (
               className="inline-block text-blue-500 cursor-pointer hover:underline"
               rel="noopener noreferrer"
               target="_blank"
-              href={l.link}
+              href={l.repo}
             >
               {l.name}
               {li + 1 === pkgs.length && '.'}
