@@ -11,7 +11,7 @@ jobs:
       - name: Set up node.
         uses: actions/setup-node@v4.1.0
         with:
-          node-version: 20.10.0
+          node-version-file: .nvmrc
       - name: Lint
         run: |
           npm ci
