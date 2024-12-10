@@ -30,8 +30,5 @@
     "start": "next start",
     "lint": "next lint && tsc",
     "format": "prettier --single-quote --write 'src/**/*.ts*'"
-  },
-  "overrides": {
-    "@typescript-eslint/parser": "8.18.0"
   }
 }
