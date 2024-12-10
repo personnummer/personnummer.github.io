@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import personnummer from 'personnummer';
 import generate from '@personnummer/generate';
-import QRCode from 'qrcode.react';
+import QRCode from 'react-qr-code';
 import Block, { BlockProps } from '../Block';
 
 const generatePersonnummer = (y: number, m: number, d: number) =>
