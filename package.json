@@ -11,7 +11,7 @@
     "@personnummer/generate": "1.0.3",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "22.13.4",
-    "@types/react": "19.0.8",
+    "@types/react": "19.0.9",
     "eslint-config-next": "15.1.7",
     "next": "15.1.7",
     "personnummer": "3.2.1",
