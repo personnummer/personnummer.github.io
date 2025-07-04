@@ -96,6 +96,7 @@ const Generate = (props: BlockProps) => {
             <p className="block tracking-wide mb-2">qr code</p>
             <div className="flex justify-center">
               <QRCode
+                title="qr code"
                 size={100}
                 value={personnummer.valid(pin) ? pin : 'not valid'}
               />
