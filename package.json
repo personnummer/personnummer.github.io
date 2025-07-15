@@ -10,7 +10,7 @@
     "@octokit/rest": "22.0.0",
     "@personnummer/generate": "1.0.3",
     "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "24.0.13",
+    "@types/node": "24.0.14",
     "@types/react": "19.1.8",
     "eslint-config-next": "15.4.1",
     "next": "15.4.1",
