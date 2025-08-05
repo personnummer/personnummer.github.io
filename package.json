@@ -22,7 +22,7 @@
     "react-qr-code": "2.0.18",
     "tailwindcss": "^4.1.11",
     "typescript": "5.9.2",
-    "yaml": "2.8.0"
+    "yaml": "2.8.1"
   },
   "scripts": {
     "dev": "next",
