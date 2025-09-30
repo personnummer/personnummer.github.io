@@ -21,7 +21,7 @@
     "react-dom": "19.1.1",
     "react-qr-code": "2.0.18",
     "tailwindcss": "^4.1.11",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "yaml": "2.8.1"
   },
   "scripts": {
