@@ -1,26 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useMemo, useState } from 'react';
 import personnummer from 'personnummer';
-import generate from '@personnummer/generate';
+import gen from '@personnummer/generate';
 import QRCode from 'react-qr-code';
 import Block, { BlockProps } from '../Block';
 
-const generatePersonnummer = (y: number, m: number, d: number) =>
-  generate(new Date(y, m, d));
+const computePersonnummer = (y: number, m: number, d: number) =>
+  gen(new Date(y, m, d));
 
 const Generate = (props: BlockProps) => {
-  const today = new Date();
+  const today = useMemo(() => new Date(), []);
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth() + 1);
   const [day, setDay] = useState(today.getDate());
-  const [pin, setPin] = useState('');
 
-  const generate = (year: number, month: number, day: number) => {
-    setPin(generatePersonnummer(year, month - 1, day));
-  };
+  const pin = useMemo(() => {
+    const y = Number.isFinite(year) ? year : today.getFullYear();
+    const m = Math.min(12, Math.max(1, month)) - 1;
+    const d = Math.min(31, Math.max(1, day));
+    try {
+      return computePersonnummer(y, m, d);
+    } catch {
+      return '';
+    }
+  }, [year, today, month, day]);
 
-  useEffect(() => {
-    generate(year, month, day);
-  }, [year, month, day]);
+  const displayValue = personnummer.valid(pin) ? pin : 'not valid';
 
   return (
     <Block {...props}>
@@ -35,15 +39,13 @@ const Generate = (props: BlockProps) => {
                 id="g-year"
                 name="g-year"
                 type="number"
-                min="1"
-                defaultValue={year}
-                onChange={(e) => {
-                  setYear(Number(e.target.value));
-                  generate(Number(e.target.value), month, day);
-                }}
+                min={1}
+                value={year}
+                onChange={(e) => setYear(Number(e.target.value))}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
+
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label className="block tracking-wide mb-2" htmlFor="g-month">
                 month
@@ -52,16 +54,14 @@ const Generate = (props: BlockProps) => {
                 id="g-month"
                 name="g-month"
                 type="number"
-                min="1"
-                max="12"
-                defaultValue={month}
-                onChange={(e) => {
-                  setMonth(Number(e.target.value));
-                  generate(year, Number(e.target.value), day);
-                }}
+                min={1}
+                max={12}
+                value={month}
+                onChange={(e) => setMonth(Number(e.target.value))}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
+
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label className="block tracking-wide mb-2" htmlFor="g-day">
                 day
@@ -70,36 +70,31 @@ const Generate = (props: BlockProps) => {
                 id="g-day"
                 name="g-day"
                 type="number"
-                min="1"
-                max="31"
-                defaultValue={day}
-                onChange={(e) => {
-                  setDay(Number(e.target.value));
-                  generate(year, month, Number(e.target.value));
-                }}
+                min={1}
+                max={31}
+                value={day}
+                onChange={(e) => setDay(Number(e.target.value))}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
           </div>
+
           <div className="px-3 mb-6 md:mb-0 md:mt-3">
             <p className="block tracking-wide mb-2">result</p>
             <input
               type="tel"
               readOnly
-              value={personnummer.valid(pin) ? pin : 'not valid'}
+              value={displayValue}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
         </div>
+
         <div className="px-3">
           <div>
             <p className="block tracking-wide mb-2">qr code</p>
             <div className="flex justify-center">
-              <QRCode
-                title="qr code"
-                size={100}
-                value={personnummer.valid(pin) ? pin : 'not valid'}
-              />
+              <QRCode title="qr code" size={100} value={displayValue} />
             </div>
           </div>
         </div>
