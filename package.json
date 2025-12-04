@@ -13,7 +13,7 @@
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "eslint": "^9.38.0",
-    "eslint-config-next": "16.0.6",
+    "eslint-config-next": "16.0.7",
     "next": "16.0.7",
     "personnummer": "3.2.1",
     "postcss": "8.5.6",
