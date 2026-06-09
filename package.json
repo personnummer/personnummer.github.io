@@ -20,7 +20,7 @@
     "prettier": "3.8.4",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "react-qr-code": "2.1.1",
+    "react-qr-code": "2.2.0",
     "tailwindcss": "^4.1.18",
     "typescript": "5.9.3",
     "yaml": "2.9.0"
