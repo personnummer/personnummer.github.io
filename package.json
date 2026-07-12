@@ -16,7 +16,7 @@
     "eslint-config-next": "16.2.10",
     "next": "16.2.10",
     "personnummer": "3.2.1",
-    "postcss": "8.5.16",
+    "postcss": "8.5.17",
     "prettier": "3.9.5",
     "react": "19.2.7",
     "react-dom": "19.2.7",
