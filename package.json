@@ -18,7 +18,7 @@
     "personnummer": "3.2.1",
     "postcss": "8.5.21",
     "prettier": "3.9.5",
-    "react": "19.2.7",
+    "react": "19.2.8",
     "react-dom": "19.2.7",
     "react-qr-code": "2.2.0",
     "tailwindcss": "^4.1.18",
