@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/063l1oknksdke.js"
+    "static/chunks/0iv1p34opqqw_.js"
   ],
   "/_error": [
     "static/chunks/2gu15sjyuuj6q.js"
