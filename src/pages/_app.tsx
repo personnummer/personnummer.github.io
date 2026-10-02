@@ -45,6 +45,10 @@ const App = ({ Component, pageProps }: AppProps) => (
           Twitter
         </a>
       </p>
+      <p className="text-center text-gray-600 mt-2">
+        In memory of Fredrik &quot;Frozzare&quot; Forsmo (1991-2026), initiator,
+        co-founder and core contributor of personnummer.
+      </p>
     </div>
   </>
 );
