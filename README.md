@@ -8,4 +8,4 @@ Website for Personnummer project and we have a "who is using this"-section where
 
 ## In memoriam
 
-Fredrik "Frozzare" Forsmo (1991-2026) was the initiator, co-founder and a core contributor of personnummer. This project carries his work. He is missed.
+Fredrik "Frozzare" Forsmo (1991-2026) started this project, co-founded it and shaped its core. This site, and every library behind it, carries his work. He is missed.
