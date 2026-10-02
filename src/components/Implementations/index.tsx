@@ -4,7 +4,7 @@ type Pkg = {
   name: string;
   branch: string;
   spec: string;
-  maintainer: string;
+  maintainer?: string;
   repo: string;
   workflow: string;
 };
@@ -84,13 +84,17 @@ const Implementations = (props: ImplementationsProps) => (
                 </a>
               </td>
               <td className="border px-4 py-2">
-                <a
-                  className="text-blue-500 hover:underline"
-                  rel="noopener noreferrer"
-                  href={`https://github.com/${pkg.maintainer.slice(1)}`}
-                >
-                  {pkg.maintainer}
-                </a>
+                {pkg.maintainer ? (
+                  <a
+                    className="text-blue-500 hover:underline"
+                    rel="noopener noreferrer"
+                    href={`https://github.com/${pkg.maintainer.slice(1)}`}
+                  >
+                    {pkg.maintainer}
+                  </a>
+                ) : (
+                  '-'
+                )}
               </td>
             </tr>
           ))}

@@ -5,3 +5,7 @@
 </div>
 
 Website for Personnummer project and we have a "who is using this"-section where you can add your company or project
+
+## In memoriam
+
+Fredrik "Frozzare" Forsmo (1991-2026) started this project, co-founded it and shaped its core. This site, and every library behind it, carries his work. He is missed.
