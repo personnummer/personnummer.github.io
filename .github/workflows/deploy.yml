@@ -5,6 +5,8 @@ on:
     branches:
       - develop
 
+  workflow_dispatch:
+
   schedule:
     - cron: "0 9-23 * * *"
 
@@ -36,12 +38,23 @@ jobs:
         env:
           CI: true
           GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
-      - name: Deploy!
-        uses: demurgos/ga-deploy-git@v1
-        if: ${{ github.event_name == 'push' }}
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        if: ${{ github.event_name != 'schedule' }}
         with:
-          accessToken: ${{ secrets.PUSH_TOKEN }}
-          commitEmail: "accounts+github@jitesoft.com"
-          commitUser: "JiteBot"
-          destBranch: "master"
-          srcDir: "out"
+          path: out
+
+  deploy:
+    needs: build
+    if: ${{ github.event_name != 'schedule' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1
