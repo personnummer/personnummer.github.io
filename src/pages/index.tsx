@@ -193,7 +193,7 @@ const Index = ({ pkgs = [] }) => (
         <p>
           Add your logo{' '}
           <a
-            href="https://github.com/personnummer/personnummer.github.io/blob/develop/src/data/users.ts"
+            href="https://github.com/personnummer/personnummer.github.io/blob/main/src/data/users.ts"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
