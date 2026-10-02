@@ -46,8 +46,9 @@ const App = ({ Component, pageProps }: AppProps) => (
         </a>
       </p>
       <p className="text-center text-gray-600 mt-2">
-        In memory of Fredrik &quot;Frozzare&quot; Forsmo (1991-2026), initiator,
-        co-founder and core contributor of personnummer.
+        Fredrik &quot;Frozzare&quot; Forsmo (1991-2026) was the initiator,
+        co-founder and a core contributor of the personnummer project. This site
+        carries his work. He is missed.
       </p>
     </div>
   </>
