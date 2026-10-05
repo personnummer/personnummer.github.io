@@ -1,7 +1,6 @@
-.next
-out
+.astro
+dist
 node_modules
 .idea
 .yalc
 yalc.lock
-tsconfig.tsbuildinfo

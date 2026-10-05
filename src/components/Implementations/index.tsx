@@ -1,4 +1,5 @@
-import Block, { BlockProps } from '../Block';
+import Block from '../Block';
+import type { BlockProps } from '../Block';
 
 type Pkg = {
   name: string;

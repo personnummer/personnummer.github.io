@@ -1,0 +1,62 @@
+---
+import '@fontsource-variable/source-sans-3';
+import '../styles/main.css';
+
+const description = 'Validate swedish personal identity numbers';
+const image = 'https://personnummer.dev/android-chrome-512x512.png';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personnummer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content="Personnummer" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:title" content="Personnummer" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <div>
+      <div class="flex flex-col flex-1 md:justify-center max-w-3xl mx-auto p-5 w-full">
+        <h1 class="text-4xl md:text-5xl text-center text-gray-700">
+          <img
+            alt="Personnummer"
+            src="/apple-touch-icon.png"
+            class="w-8 sm:w-12 inline-block"
+          />{' '}
+          personnummer
+        </h1>
+        <slot />
+      </div>
+      <div class="border-t border-solid border-gray-300 pt-5 my-5">
+        <p class="text-center text-gray-600">
+          Copyright © {new Date().getFullYear()} Personnummer and Contributors
+        </p>
+        <p class="text-center text-gray-600">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/personnummer/personnummer.github.io"
+            class="text-blue-500 hover:underline"
+          >
+            GitHub
+          </a>
+        </p>
+        <p class="text-center text-gray-600 mt-2">
+          Fredrik "Frozzare" Forsmo (1991-2026) started this project, co-founded
+          it and shaped its core. This site, and every library behind it,
+          carries his work. He is missed.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

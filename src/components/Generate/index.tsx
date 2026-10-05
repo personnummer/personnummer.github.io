@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react';
 import personnummer from 'personnummer';
 import gen from '@personnummer/generate';
 import QRCode from 'react-qr-code';
-import Block, { BlockProps } from '../Block';
+import Block from '../Block';
+import type { BlockProps } from '../Block';
 
 const computePersonnummer = (y: number, m: number, d: number) => {
   const date = new Date(y, m, d);

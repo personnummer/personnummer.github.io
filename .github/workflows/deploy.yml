@@ -7,8 +7,12 @@ on:
 
   workflow_dispatch:
 
+  pull_request:
+    branches:
+      - main
+
   schedule:
-    - cron: "0 9-23 * * *"
+    - cron: "0 */3 * * *"
 
 jobs:
   build:
@@ -19,17 +23,7 @@ jobs:
         uses: actions/setup-node@v7.0.0
         with:
           node-version-file: .nvmrc
-      - name: Setup cache
-        uses: actions/cache@v6
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+          cache: npm
       - name: Install
         run: npm ci
       - name: Build and export
@@ -37,16 +31,16 @@ jobs:
           npm run build
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN || github.token }}
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v5.0.0
-        if: ${{ github.event_name != 'schedule' }}
+        if: ${{ github.event_name != 'pull_request' }}
         with:
-          path: out
+          path: dist
 
   deploy:
     needs: build
-    if: ${{ github.event_name != 'schedule' }}
+    if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
