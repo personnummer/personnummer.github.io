@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import personnummer from 'personnummer';
 import Block, { BlockProps } from '../Block';
-import pkg from '../../../package.json';
+import { version } from 'personnummer/package.json';
 
 type Output = {
   age: number;
@@ -19,7 +19,7 @@ const personnummerOptions = {
 };
 
 const getPersonnummerObj = (pin: string): Output => {
-  const output = {
+  const output: Output = {
     age: 0,
     long: 'n/a',
     short: 'n/a',
@@ -28,10 +28,6 @@ const getPersonnummerObj = (pin: string): Output => {
     interim: false,
     valid: personnummer.valid(pin, personnummerOptions)
   };
-
-  if (typeof pin !== 'string') {
-    return output;
-  }
 
   try {
     const p = personnummer.parse(pin, personnummerOptions);
@@ -44,7 +40,7 @@ const getPersonnummerObj = (pin: string): Output => {
       output.con = p.isCoordinationNumber();
       output.interim = p.isInterimNumber();
     }
-  } catch (err) {
+  } catch {
     output.sex = 'n/a';
   }
 
@@ -62,7 +58,7 @@ const Try = (props: BlockProps) => {
         type="text"
         placeholder="YYMMDDXXXX"
         onChange={(e) => setPin(e.target.value)}
-        className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-hidden focus:ring-2 focus:ring-blue-300"
       />
       <p className="pt-3">result</p>
       <table className="table-fixed w-full">
@@ -115,10 +111,7 @@ const Try = (props: BlockProps) => {
           </tr>
         </tbody>
       </table>
-      <p className="mt-3 italic">
-        using javascript version{' '}
-        {pkg.devDependencies.personnummer.replace('^', '')}
-      </p>
+      <p className="mt-3 italic">using javascript version {version}</p>
     </Block>
   );
 };

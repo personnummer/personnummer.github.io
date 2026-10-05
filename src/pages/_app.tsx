@@ -1,10 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import { Source_Sans_3 } from 'next/font/google';
 import '../styles/main.css';
 
+const font = Source_Sans_3({ subsets: ['latin'] });
+
 const App = ({ Component, pageProps }: AppProps) => (
-  <>
+  <div className={font.className}>
     <div className="flex flex-col flex-1 md:justify-center max-w-3xl mx-auto p-5 w-full">
       <Head>
         <title>Personnummer</title>
@@ -34,15 +37,6 @@ const App = ({ Component, pageProps }: AppProps) => (
           className="text-blue-500 hover:underline"
         >
           GitHub
-        </a>{' '}
-        -{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/sweidproject"
-          className="text-blue-500 hover:underline"
-        >
-          Twitter
         </a>
       </p>
       <p className="text-center text-gray-600 mt-2">
@@ -51,7 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => (
         it, carries his work. He is missed.
       </p>
     </div>
-  </>
+  </div>
 );
 
 export default App;

@@ -7,7 +7,7 @@ import Try from '../components/Try';
 import Generate from '../components/Generate';
 import usersData from '../data/users';
 
-const users = usersData.sort((a, b) => a.name.localeCompare(b.name));
+const users = [...usersData].sort((a, b) => a.name.localeCompare(b.name));
 
 const Index = ({ pkgs = [] }) => (
   <>
@@ -89,8 +89,8 @@ const Index = ({ pkgs = [] }) => (
 
     <p className="pt-3">
       Some implementations may be a{' '}
-      <span className="rounded bg-gray-300 px-1">work in progress</span> if you
-      find a bug, please open an issue in the specific implementation
+      <span className="rounded-sm bg-gray-300 px-1">work in progress</span> if
+      you find a bug, please open an issue in the specific implementation
       repository.
     </p>
 
@@ -227,13 +227,14 @@ export async function getStaticProps() {
     auth: process.env.GITHUB_TOKEN
   });
 
-  const repos = await octokit.rest.repos.listForOrg({
+  const repos = await octokit.paginate(octokit.rest.repos.listForOrg, {
     org: 'personnummer',
-    type: 'public'
+    type: 'public',
+    per_page: 100
   });
 
   const files = await Promise.allSettled(
-    repos.data.map(async (repo) =>
+    repos.map(async (repo) =>
       octokit.rest.repos.getContent({
         owner: 'personnummer',
         repo: repo.name,
@@ -246,7 +247,7 @@ export async function getStaticProps() {
     .filter(({ status }) => status === 'fulfilled')
     .map((x: any) => ({
       content: x.value.data.content,
-      branch: /ref=(\w+)/.exec(x.value.data.url)[1],
+      branch: /ref=([^&]+)/.exec(x.value.data.url)[1],
       repo: x.value.data.html_url
     }))
     .map((x) => ({
