@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import personnummer from 'personnummer';
-import Block, { BlockProps } from '../Block';
+import Block from '../Block';
+import type { BlockProps } from '../Block';
 import { version } from 'personnummer/package.json';
 
 type Output = {
