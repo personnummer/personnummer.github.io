@@ -8,14 +8,14 @@ export type BlockProps = Partial<{
 const Block = ({
   border = true,
   children,
-  className,
+  className = '',
   title = ''
 }: BlockProps) => (
   <div className={`mt-5 ${className}`}>
     {title && (
       <h2
         className={`text-lg md:text-xl text-gray-700 mb-2 ${
-          border ? 'border-b border-gray' : ''
+          border ? 'border-b border-gray-200' : ''
         }`}
         id={title.toLowerCase().replace(/ /g, '-')}
       >

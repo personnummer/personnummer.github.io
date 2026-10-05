@@ -4,8 +4,12 @@ import gen from '@personnummer/generate';
 import QRCode from 'react-qr-code';
 import Block, { BlockProps } from '../Block';
 
-const computePersonnummer = (y: number, m: number, d: number) =>
-  gen(new Date(y, m, d));
+const computePersonnummer = (y: number, m: number, d: number) => {
+  const date = new Date(y, m, d);
+
+  // Reject dates that rolled over, such as February 31.
+  return date.getMonth() === m ? gen(date) : '';
+};
 
 const Generate = (props: BlockProps) => {
   const today = useMemo(() => new Date(), []);
@@ -42,7 +46,7 @@ const Generate = (props: BlockProps) => {
                 min={1}
                 value={year}
                 onChange={(e) => setYear(Number(e.target.value))}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-hidden focus:ring-2 focus:ring-blue-300"
               />
             </div>
 
@@ -58,7 +62,7 @@ const Generate = (props: BlockProps) => {
                 max={12}
                 value={month}
                 onChange={(e) => setMonth(Number(e.target.value))}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-hidden focus:ring-2 focus:ring-blue-300"
               />
             </div>
 
@@ -74,7 +78,7 @@ const Generate = (props: BlockProps) => {
                 max={31}
                 value={day}
                 onChange={(e) => setDay(Number(e.target.value))}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-hidden focus:ring-2 focus:ring-blue-300"
               />
             </div>
           </div>
@@ -85,7 +89,7 @@ const Generate = (props: BlockProps) => {
               type="tel"
               readOnly
               value={displayValue}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-sm appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-hidden focus:ring-2 focus:ring-blue-300"
             />
           </div>
         </div>
