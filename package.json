@@ -15,7 +15,7 @@
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "26.6.4",
     "@types/react": "19.3.0",
-    "astro": "7.3.6",
+    "astro": "7.3.7",
     "personnummer": "3.3.1",
     "prettier": "3.9.9",
     "prettier-plugin-astro": "1.1.0",
