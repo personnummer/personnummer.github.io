@@ -19,7 +19,7 @@ const repos = await octokit.paginate(octokit.rest.repos.listForOrg, {
 });
 
 const files = await Promise.allSettled(
-  repos.map(async (repo) =>
+  repos.filter((repo) => !repo.archived).map(async (repo) =>
     octokit.rest.repos.getContent({
       owner: 'personnummer',
       repo: repo.name,
